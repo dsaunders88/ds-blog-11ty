@@ -1,0 +1,18 @@
+{% extends "base.njk" %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = page_summary %}
+
+{% block content %}
+
+    {% include "partials/posts-header.njk" %}
+
+    <div
+        class="container mx-auto max-w-screen-lg px-6 py-20 lg:border-l lg:border-slate-600 lg:px-8"
+    >
+        <article class="article leading-normal max-w-[59ch] prose-p:mb-8 prose-a:text-rose-400 prose-a:underline hover:prose-a:no-underline prose-headings:font-header prose-headings:font-bold prose-headings:text-3xl prose-headings:text-slate-200 prose-headings:mb-8 prose-headings:mt-20 first:prose-headings:mt-0 prose-ul:pl-4 lg:prose-ul:pl-0 prose-ul:list-disc marker:prose-ul:text-rose-400">
+            {{ content | safe }}
+        </article>
+    </div>
+
+{% endblock %}

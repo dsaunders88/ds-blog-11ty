@@ -1,0 +1,123 @@
+<header class="fixed z-40 w-full md:absolute" x-data="{ scrollStyle: false }">
+    <div
+        class="flex flex-wrap items-center justify-between py-2 pr-1 transition-all duration-200 md:pl-6 md:pr-6 md:pt-8 xl:px-20 xl:pt-12"
+        x-data="{ isOpen: false }"
+        :class="{ 'bg-slate-900 md:bg-transparent' : scrollStyle }"
+        @scroll.window="scrollStyle = (window.pageYOffset > 20) ? true : false"
+    >
+        <a
+            href="{{ navigation.navItems[0].url }}"
+            class="group pl-4 font-header text-lg font-bold text-slate-200 md:pl-0"
+        >
+            <span
+                id="logomark"
+                class="mr-1 inline-block bg-rose-500 px-1 py-1 leading-none text-slate-900"
+                >ds</span
+            >
+            <span class="group-hover:opacity-80">{{ site.name }}</span>
+        </a>
+
+        <!-- Mobile menu trigger -->
+        <button
+            class="relative top-[1px] py-3 px-6 transition-all duration-200 md:hidden"
+            type="button"
+            aria-label="mobile navigation button"
+            @click="isOpen = true"
+            :class="{ '-rotate-90': isOpen }"
+        >
+            <i
+                class="fa-duotone fa-ellipsis-vertical text-xl text-rose-400"
+            ></i>
+        </button>
+
+        <!-- Mobile menu modal -->
+        <div
+            x-show="isOpen" 
+            style="display: none"
+            @keydown.escape.prevent.stop="isOpen = false"
+            role="dialog"
+            aria-modal="true"
+            id="mobile-menu-modal" 
+            aria-labelledby="mobile-navigation" 
+            class="fixed inset-0 overflow-y-auto z-50 md:hidden"
+        >
+            <!-- Panel -->
+            <div
+                x-show="isOpen"
+                x-transition:enter="transition-all ease-out duration-300"
+                x-transition:enter-start="opacity-0 -translate-x-full"
+                x-transition:enter-end="opacity-100 translate-x-0"
+                x-transition:leave="transition-all ease-in duration-300"
+                x-transition:leave-start="opacity-100 translate-x-0"
+                x-transition:leave-end="opacity-0 -translate-x-full"
+                @click="isOpen = false"
+                class="relative min-h-screen bg-gradient-to-br from-rose-400 to-rose-500 flex items-center justify-center p-12"
+            >
+                <div class="absolute min-h-screen inset-0 w-full h-full opacity-40">
+                    <svg id="visual" viewBox="0 0 450 900" preserveAspectRatio="none" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><g stroke-width="1" stroke-linejoin="bevel"><path d="M227 438L286.5 469L304.5 404.5Z" fill="#f85a72" stroke="#f85a72"></path><path d="M224 612.5L318.5 531.5L286.5 469Z" fill="#fa687d" stroke="#fa687d"></path><path d="M286.5 469L450 465L304.5 404.5Z" fill="#f64b66" stroke="#f64b66"></path><path d="M304.5 404.5L285 290.5L227 438Z" fill="#f95f76" stroke="#f95f76"></path><path d="M77.5 358.5L100.5 439L227 438Z" fill="#fa6d81" stroke="#fa6d81"></path><path d="M227 438L164.5 585.5L286.5 469Z" fill="#f43f5e" stroke="#f43f5e"></path><path d="M318.5 531.5L450 465L286.5 469Z" fill="#f7556e" stroke="#f7556e"></path><path d="M304.5 404.5L450 371.5L285 290.5Z" fill="#f9647a" stroke="#f9647a"></path><path d="M100.5 439L164.5 585.5L227 438Z" fill="#f43f5e" stroke="#f43f5e"></path><path d="M164.5 585.5L224 612.5L286.5 469Z" fill="#fa687d" stroke="#fa687d"></path><path d="M318.5 531.5L450 614.5L450 465Z" fill="#f43f5e" stroke="#f43f5e"></path><path d="M450 465L450 371.5L304.5 404.5Z" fill="#f43f5e" stroke="#f43f5e"></path><path d="M285 290.5L77.5 358.5L227 438Z" fill="#f64b66" stroke="#f64b66"></path><path d="M259 705L271.5 638L224 612.5Z" fill="#f9647a" stroke="#f9647a"></path><path d="M224 612.5L271.5 638L318.5 531.5Z" fill="#f9647a" stroke="#f9647a"></path><path d="M450 371.5L450 281L285 290.5Z" fill="#f95f76" stroke="#f95f76"></path><path d="M389.5 202L289 186L285 290.5Z" fill="#f64b66" stroke="#f64b66"></path><path d="M285 290.5L151.5 180L77.5 358.5Z" fill="#f64b66" stroke="#f64b66"></path><path d="M450 281L389.5 202L285 290.5Z" fill="#fa687d" stroke="#fa687d"></path><path d="M271.5 638L450 614.5L318.5 531.5Z" fill="#f7506a" stroke="#f7506a"></path><path d="M63.5 649L259 705L224 612.5Z" fill="#f85a72" stroke="#f85a72"></path><path d="M271.5 638L338.5 769.5L450 614.5Z" fill="#f54562" stroke="#f54562"></path><path d="M289 186L151.5 180L285 290.5Z" fill="#f7506a" stroke="#f7506a"></path><path d="M77.5 358.5L0 507L100.5 439Z" fill="#f85a72" stroke="#f85a72"></path><path d="M100.5 439L0 507L164.5 585.5Z" fill="#fa6d81" stroke="#fa6d81"></path><path d="M124.5 832.5L266 727.5L259 705Z" fill="#f95f76" stroke="#f95f76"></path><path d="M0 316.5L0 507L77.5 358.5Z" fill="#f85a72" stroke="#f85a72"></path><path d="M0 277L0 316.5L77.5 358.5Z" fill="#f9647a" stroke="#f9647a"></path><path d="M63.5 649L224 612.5L164.5 585.5Z" fill="#f9647a" stroke="#f9647a"></path><path d="M259 705L338.5 769.5L271.5 638Z" fill="#fa6d81" stroke="#fa6d81"></path><path d="M0 570.5L63.5 649L164.5 585.5Z" fill="#f95f76" stroke="#f95f76"></path><path d="M0 507L0 570.5L164.5 585.5Z" fill="#f54562" stroke="#f54562"></path><path d="M289 186L273.5 121.5L151.5 180Z" fill="#f7556e" stroke="#f7556e"></path><path d="M290 119.5L273.5 121.5L289 186Z" fill="#f43f5e" stroke="#f43f5e"></path><path d="M151.5 180L0 277L77.5 358.5Z" fill="#f43f5e" stroke="#f43f5e"></path><path d="M389.5 202L290 119.5L289 186Z" fill="#f7556e" stroke="#f7556e"></path><path d="M450 281L450 173.5L389.5 202Z" fill="#f7506a" stroke="#f7506a"></path><path d="M389.5 202L450 173.5L290 119.5Z" fill="#fa6d81" stroke="#fa6d81"></path><path d="M151.5 180L53.5 172.5L0 277Z" fill="#f64b66" stroke="#f64b66"></path><path d="M0 100.5L53.5 172.5L181.5 0Z" fill="#f43f5e" stroke="#f43f5e"></path><path d="M266 727.5L338.5 769.5L259 705Z" fill="#fb7185" stroke="#fb7185"></path><path d="M245 900L338.5 769.5L266 727.5Z" fill="#fa6d81" stroke="#fa6d81"></path><path d="M338.5 769.5L450 743L450 614.5Z" fill="#f7506a" stroke="#f7506a"></path><path d="M0 570.5L0 719L63.5 649Z" fill="#fa687d" stroke="#fa687d"></path><path d="M63.5 649L124.5 832.5L259 705Z" fill="#f7506a" stroke="#f7506a"></path><path d="M181.5 0L53.5 172.5L151.5 180Z" fill="#fa687d" stroke="#fa687d"></path><path d="M53.5 172.5L0 100.5L0 277Z" fill="#f9647a" stroke="#f9647a"></path><path d="M181.5 0L151.5 180L273.5 121.5Z" fill="#f9647a" stroke="#f9647a"></path><path d="M0 719L124.5 832.5L63.5 649Z" fill="#f95f76" stroke="#f95f76"></path><path d="M338.5 769.5L450 833.5L450 743Z" fill="#f9647a" stroke="#f9647a"></path><path d="M360.5 0L274 0L290 119.5Z" fill="#fa6d81" stroke="#fa6d81"></path><path d="M290 119.5L274 0L273.5 121.5Z" fill="#f43f5e" stroke="#f43f5e"></path><path d="M274 0L181.5 0L273.5 121.5Z" fill="#f95f76" stroke="#f95f76"></path><path d="M450 173.5L360.5 0L290 119.5Z" fill="#f7506a" stroke="#f7506a"></path><path d="M403.5 900L450 833.5L338.5 769.5Z" fill="#fb7185" stroke="#fb7185"></path><path d="M450 173.5L450 0L360.5 0Z" fill="#f9647a" stroke="#f9647a"></path><path d="M124.5 832.5L245 900L266 727.5Z" fill="#f43f5e" stroke="#f43f5e"></path><path d="M0 719L0 828.5L124.5 832.5Z" fill="#f85a72" stroke="#f85a72"></path><path d="M124.5 832.5L119.5 900L245 900Z" fill="#fb7185" stroke="#fb7185"></path><path d="M245 900L403.5 900L338.5 769.5Z" fill="#f54562" stroke="#f54562"></path><path d="M0 828.5L119.5 900L124.5 832.5Z" fill="#f54562" stroke="#f54562"></path><path d="M403.5 900L450 900L450 833.5Z" fill="#fb7185" stroke="#fb7185"></path><path d="M181.5 0L0 0L0 100.5Z" fill="#f54562" stroke="#f54562"></path><path d="M0 828.5L0 900L119.5 900Z" fill="#f9647a" stroke="#f9647a"></path></g></svg>
+                </div>
+                <button 
+                    @click="isOpen = false"
+                    aria-label="mobile navigation close" 
+                    class="absolute top-6 right-6 hover:opacity-80 text-slate-900 text-3xl"
+                >
+                    <i class="fa-solid fa-circle-x"><span class="sr-only">Close</span></i>
+                </button>
+                <div
+                    @click.stop
+                    x-trap.noscroll.inert="isOpen"
+                    class="relative w-full overflow-y-auto font-header font-bold text-4xl text-slate-900"
+                >
+                    <nav>
+                        <div id="mobile-navigation" class="sr-only">Mobile Navigation</div>
+                        <ul class="flex flex-col space-y-8">
+                            {% for navItem in navigation.navItems %}
+                                <li>
+                                    <a href="{{ navItem.url }}" class="hover:underline">{{ navItem.text }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <ul class="flex space-x-10 mt-12">
+                            <li>
+                                <a href="{{ site.socialLinks.twitter }}" class="hover:opacity-80">
+                                    <i class="fa-brands fa-twitter"><span class="sr-only">Twitter</span></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ site.socialLinks.github }}" class="hover:opacity-80">
+                                    <i class="fa-brands fa-github"><span class="sr-only">GitHub</span></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ site.socialLinks.soundcloud }}" class="hover:opacity-80">
+                                    <i class="fa-brands fa-soundcloud"><span class="sr-only">SoundCloud</span></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop nav -->
+        <nav 
+            aria-label="site navigation"
+            class="hidden md:flex">
+            <ul
+                class="flex space-x-8 mr-4"
+            >
+                {% for navItem in navigation.navItems %}
+                    <li class="text-lg mx-4 p-4 text-right sm:p-0 sm:text-center">
+                        {% if navItem.text != "Home" %}
+                            <a
+                                href="{{ navItem.url }}"
+                                class="text-slate-900 hover:underline sm:text-slate-200 sm:hover:text-rose-400"
+                                >{{ navItem.text }}</a
+                            >
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>

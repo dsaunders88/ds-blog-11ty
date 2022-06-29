@@ -1,0 +1,115 @@
+<footer class="border-t border-slate-600 bg-slate-900 py-24 px-8">
+    <section class="container mx-auto grid grid-cols-4 gap-8">
+        <div class="col-span-4 font-header font-bold text-base lg:col-span-1">
+            © 2022, Daniel Saunders
+        </div>
+        <div class="col-span-2 lg:col-span-1">
+            <p
+                class="mb-4 font-header text-sm font-bold uppercase tracking-widest text-rose-400"
+            >
+                Info
+            </p>
+            <ul>
+                {% for navItem in navigation.navItems %}
+                <li class="mb-4 sm:mb-2">
+                    <a
+                        href="{{ navItem.url }}"
+                        class="hover:text-rose-400 hover:underline"
+                        >{{ navItem.text }}</a
+                    >
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-span-2 lg:col-span-1">
+            <p
+                class="mb-4 font-header text-sm font-bold uppercase tracking-widest text-rose-400"
+            >
+                Follow
+            </p>
+            <ul class="relative -left-2">
+                <li class="mb-4 flex items-center sm:mb-2">
+                    <a
+                        href="{{ site.socialLinks.twitter }}"
+                        class="peer order-2 hover:text-rose-400 hover:underline"
+                        target="_blank"
+                    >
+                        Twitter
+                    </a>
+                    <i
+                        class="fa-brands fa-twitter order-1 mr-2 w-6 text-sm peer-hover:text-rose-400"
+                    ></i>
+                </li>
+                <li class="mb-4 flex items-center sm:mb-2">
+                    <a
+                        href="{{ site.socialLinks.github }}"
+                        class="peer order-2 hover:text-rose-400 hover:underline"
+                        target="_blank"
+                    >
+                        GitHub
+                    </a>
+                    <i
+                        class="fa-brands fa-github order-1 mr-2 w-6 text-sm peer-hover:text-rose-400"
+                    ></i>
+                </li>
+                <li class="mb-4 flex items-center sm:mb-2">
+                    <a
+                        href="{{ site.socialLinks.soundcloud }}"
+                        class="peer order-2 hover:text-rose-400 hover:underline"
+                        target="_blank"
+                    >
+                        SoundCloud
+                    </a>
+                    <i
+                        class="fa-brands fa-soundcloud order-1 mr-2 w-6 text-sm peer-hover:text-rose-400"
+                    ></i>
+                </li>
+            </ul>
+        </div>
+        <div class="col-span-4 lg:col-span-1">
+            <p
+                class="mb-4 font-header text-sm font-bold uppercase tracking-widest text-rose-400"
+            >
+                Colophon
+            </p>
+            <ul class="text-sm">
+                <li class="mb-4 lg:mb-2">
+                    <span class="font-bold">Headings:</span>
+                    <a href="{{ site.colophon.headingFont.url }}" target="_blank" class="group text-rose-400">
+                        <span class="underline group-hover:no-underline"
+                            >{{ site.colophon.headingFont.text }}</span
+                        >
+                        <i
+                            class="fa-duotone fa-arrow-up-right-from-square relative bottom-[1px] ml-0.5 text-[12px] transition-transform duration-100 group-hover:-translate-y-1"
+                        ></i>
+                    </a>
+                </li>
+                <li class="mb-4 lg:mb-2">
+                    <span class="font-bold">Body:</span>
+                    <a href="{{ site.colophon.bodyFont.url }}" target="_blank" class="group text-rose-400">
+                        <span class="underline group-hover:no-underline"
+                            >{{ site.colophon.bodyFont.text }}</span
+                        >
+                        <i
+                            class="fa-duotone fa-arrow-up-right-from-square relative bottom-[1px] ml-0.5 text-[12px] transition-transform duration-100 group-hover:-translate-y-1"
+                        ></i>
+                    </a>
+                </li>
+                <li class="mb-4 lg:mb-2">
+                    <span class="font-bold">Built with:</span>
+                    <ul class="mt-2 lg:mt-1">
+                        {% set buildTools = site.colophon.builtWith %}
+                        {% for item in buildTools %}
+                            <li class="mb-4 lg:mb-1">
+                                <a href="{{ item.url }}" target="_blank" class="group text-rose-400">
+                                    <span class="underline group-hover:no-underline">{{ item.text }}</span>
+                                    <i class="fa-duotone fa-arrow-up-right-from-square relative bottom-[1px] ml-0.5 text-[12px] transition-transform duration-100 group-hover:-translate-y-1"></i>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+</footer>

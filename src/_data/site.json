@@ -1,0 +1,40 @@
+{
+	"name": "Daniel Saunders",
+	"metaTitle": "Daniel Saunders Blog",
+	"metaDescription": "This site is an occasional record of Daniel Saunders' reading and writing.",
+	"url": "https://daniel-saunders.com/",
+	"favicon": "/assets/ds-logo.svg",
+	"socialLinks": {
+		"twitter": "https://twitter.com/dothedan",
+		"github": "https://github.com/dsaunders88",
+		"soundcloud": "https://soundcloud.com/daniel-saunders-space"
+	},
+	"siteLinks": {
+		"portfolio": "https://www.danielsaunders.xyz/",
+		"linktree": "https://linktr.ee/dothedan"
+	},
+	"colophon": {
+		"headingFont": {
+			"text": "Hoss Sharp",
+			"url": "https://pstypelab.com/hoss-sharp"
+		},
+		"bodyFont": {
+			"text": "Ratio",
+			"url": "https://pstypelab.com/ratio"
+		},
+		"builtWith": [
+			{
+				"text": "TailwindCSS",
+				"url": "https://tailwindcss.com/"
+			},
+			{
+				"text": "Alpine.js",
+				"url": "https://alpinejs.dev/"
+			},
+			{
+				"text": "Eleventy",
+				"url": "https://www.11ty.dev/"
+			}
+		]
+	}
+}

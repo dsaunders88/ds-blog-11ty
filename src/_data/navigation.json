@@ -1,0 +1,20 @@
+{
+	"navItems": [
+		{
+			"text": "Home",
+			"url": "/"
+		},
+		{
+			"text": "Posts",
+			"url": "/posts/"
+		},
+		{
+			"text": "Writing",
+			"url": "/writing/"
+		},
+		{
+			"text": "Now",
+			"url": "/now/"
+		}
+	]
+}

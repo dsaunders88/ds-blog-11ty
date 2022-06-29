@@ -1,0 +1,26 @@
+---
+title: "Beyond Jubilee: Debt Abolition"
+post_image:
+  url: /assets/cant-pay-wont-pay.jpg
+  alt: Book cover of Can't Pay, Won't Pay.
+  source: <a href="https://www.haymarketbooks.org/books/1520-can-t-pay-won-t-pay" target="_blank">Haymarket Books</a>
+post_summary: While debt is a weapon that divides, isolates, and disciplines us, debt is also something that unites us, “binding each of us to a broader set of financial and political circumstances” that intersect racist, colonialist, and capitalist forms of exploitation.
+post_intro: "<em>Can’t Pay, Won’t Pay: The Case for Economic Disobedience and Debt Abolition</em> is an excellent new book from Haymarket that I have reviewed for <em>The Bias</em> magazine."
+tags:
+  - christianity
+  - socialism
+  - reading
+category:
+  - review
+date: 2021-03-25
+---
+
+<a href='https://christiansocialism.com/debt-collective-cant-pay-wont-pay-christianity/' target='_blank'>Link to review here</a>. _Can’t Pay, Won’t Pay_ is a product of the collective theorizing and organizing of the <a href='https://debtcollective.org/' target='_blank'>Debt Collective</a>. It’s an excellent primer on the history of neoliberalism’s weaponization of debt as well as an effective call to anti-capitalist action. That action, argues _Can’t Pay, Won’t Pay_, should spring from debtors’ unions, a new collective model of solidarity centered on fighting the realities of financialized capitalism (such as collectively not paying exploitative debts in “debt strikes”).
+
+The solidarity offered by debtors’ unions stands in marked contrast to standard societal narratives surrounding debt. Debt is usually regarded as an individual matter, the inexorable moral outcome of good or bad choices by more or less deserving people. As soon as we start to understand debt not as a primarily personal affair but as a built-in structural feature of financial capitalism—one that disciplines us by saddling us with obligations only to be “redeemed through future value production” (David Harvey)—we can better resist it through collective action.
+
+This interconnection of the individual and structural is what _Can’t Pay, Won’t Pay_ highlights so well: while debt is a weapon that divides, isolates, and disciplines us, debt is also something that unites us, “binding each of us to a broader set of financial and political circumstances” that intersect racist, colonialist, and capitalist forms of exploitation. Such “indebtedness” is a necessary component of solidarity, and is a natural entry-point for Christian thinking on economic justice.
+
+The book is also very good in bringing an international, anti-imperialist perspective to debt abolition. Debt abolition isn’t just about helping North American consumers but centers a global-historical fight against monopoly powers that have disproportionately harmed nations of the Global South. From the Haitian Revolution of 1791 to the Cochabamba Water War of 1999, exploitative debt forcibly imposed by wealthy, largely white states and corporations has been a central factor in sparking democratic uprisings from below. The invitation to see and organize around this kind of historical debt resistance is necessary to building an internationalist-socialist world—not least because the fight is very often against the same international financial powers.
+
+_Check out the <a href='https://christiansocialism.com/debt-collective-cant-pay-wont-pay-christianity/' target='_blank'>full review here</a> and the <a href='https://www.haymarketbooks.org/books/1520-can-t-pay-won-t-pay' target='_blank'>book here</a>._

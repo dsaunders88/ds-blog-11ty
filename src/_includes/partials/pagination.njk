@@ -1,0 +1,21 @@
+{% if pagination.href.next or pagination.href.previous %}
+    <footer class="col-start-1 col-span-3 mb-8 lg:mb-0 lg:col-start-2 lg:col-span-2">
+        <nav class="flex space-x-4">
+
+            {% if pagination.href.next %}
+                <a href="{{ pagination.href.next }}" data-direction="forwards" class="col-start-2 rounded-lg w-fit bg-gradient-to-r from-rose-400 to-rose-300 py-2 px-4 text-slate-900 hover:-translate-y-1 transition-transform duration-100">
+                    <i class="fa-solid fa-arrow-left mr-1"></i>
+                    <span>{{ paginationNextText if paginationNextText else 'Next' }}</span>
+                </a>
+            {% endif %}
+
+            {% if pagination.href.previous %}
+                <a href="{{ pagination.href.previous }}" data-direction="backwards" class="col-start-2 rounded-lg w-fit bg-gradient-to-r from-rose-400 to-rose-300 py-2 px-4 text-slate-900 hover:-translate-y-1 transition-transform duration-100">
+                    <i class="fa-solid fa-arrow-right mr-1"></i>
+                    <span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
+                </a>
+            {% endif %}
+
+        </nav>
+    </footer>
+{% endif %}

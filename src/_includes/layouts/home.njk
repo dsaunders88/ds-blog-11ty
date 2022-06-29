@@ -1,0 +1,75 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+    <!-- Intro -->
+    <article class="hero-clipped relative border-b border-slate-600 pt-52 pb-40">
+        <div
+            class="container relative z-10 mx-auto flex max-w-screen-xl flex-col items-start px-6 lg:flex-row lg:items-center lg:justify-between">
+            <div class="mb-12 lg:mb-0">
+                <span
+                    class="mb-5 block font-header text-lg font-medium italic"
+                >
+                    {{ intro.eyebrow }}
+                </span>
+                <h1
+                    class="mb-8 font-header text-6xl font-bold"
+                >
+                    <span
+                        class="bg-gradient-to-r from-rose-500 to-rose-300 bg-clip-text text-transparent"
+                    >
+                        {{ intro.title }}
+                    </span>
+                </h1>
+                {{ content | safe }}
+            </div>
+            <a
+                href="{{ site.siteLinks.linktree }}"
+                target="_blank"
+                class="relative w-44 lg:w-48 text-center rounded-lg bg-gradient-to-r from-rose-400 to-rose-300 py-3 px-5 text-xl text-slate-900 lg:right-16 hover:-translate-y-1 transition-transform duration-100"
+            >
+                <i class="fa-solid fa-block-question mr-1"></i>
+                    More Stuff
+            </a>
+        </div>
+        <div class="custom-background absolute inset-0 h-full w-full"></div>
+    </article>
+
+<!-- Posts -->
+    <article class="container mx-auto px-6 pt-12 pb-24">
+        <div class="lg:grid lg:w-9/12 lg:grid-cols-3 lg:gap-12">
+            <h2
+                class="mb-12 font-header text-lg font-medium italic lg:col-span-2 lg:col-start-2"
+            >
+                <i class="fa-duotone fa-clock mr-2 text-rose-400"></i>
+                Recent Posts
+            </h2>
+        </div>
+        <div class="flex flex-col justify-center lg:flex-row">
+            <div class="w-full lg:w-9/12">
+
+                <div class="mb-12 grid grid-cols-1 gap-12">
+                    <!-- replace for loop with asyncEach loop for responsive images -->
+                    {% asyncEach item in collections.posts | reverse | limit(3) %}
+
+                        {% include "partials/posts-listing.njk" %}
+
+                    {% endeach %}
+                </div>
+
+                <div class="grid grid-cols-3 gap-6 mb-6 lg:gap-12">
+                    <a href="{{ navigation.navItems[1].url }}" class="col-start-1 col-span-3 lg:col-start-2 lg:col-span-1 rounded-lg w-fit bg-gradient-to-r from-rose-400 to-rose-300 py-2 px-4 mb-12 lg:mb-0 text-slate-900 hover:-translate-y-1 transition-transform duration-100">
+                        <i class="fa-solid fa-ball-pile mr-1"></i>
+                        See All Posts
+                    </a>
+                </div>
+            </div>
+            <section class="relative w-full lg:top-[-4.9rem] lg:w-3/12 lg:pl-6">
+            
+                {% include "partials/tags-list-all.njk" %}
+
+            </section>
+        </div>
+    </article>
+
+{% endblock %}

@@ -1,0 +1,4 @@
+{
+	"layout": "layouts/posts-view.njk",
+	"permalink": "/posts/{{ title | slugify }}/index.html"
+}

@@ -1,0 +1,41 @@
+{% extends "base.njk" %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = page_summary %}
+{% set postListItems = pagination.items %}
+
+{% block content %}
+
+    {% include "partials/posts-header.njk" %}
+
+    <div
+        class="container mx-auto px-6 lg:px-8 py-20"
+    >
+        <div class="flex flex-col justify-center lg:flex-row">
+            <div class="w-full lg:w-9/12 relative">
+
+                <div class="mb-12 grid grid-cols-1 gap-12">
+
+                    {% asyncEach item in postListItems %}
+
+                        {% include "partials/posts-listing.njk" %}
+
+                    {% endeach %}
+
+                </div>
+
+                <div class="grid grid-cols-3 gap-6 lg:gap-12 -mt-12 mb-12">
+
+                        {% include "partials/pagination.njk" %}
+
+                </div>
+            </div>
+            <aside class="relative w-full lg:w-3/12 lg:pl-6">
+            
+                {% include "partials/tags-list-all.njk" %}
+
+            </aside>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "base.njk" %}
+
+{% set pageHeaderTitle = tag %}
+{% set postListItems = collections[tag] | reverse %}
+
+{% block content %}
+
+<div class="hero-clipped custom-background absolute inset-0 z-5 h-60 w-full lg:h-[17rem]"></div>
+
+<article
+    class="container relative mx-auto flex max-w-screen-lg flex-col px-4 pt-60 min-h-screen pb-16 lg:flex-row"
+>
+    <div class="mb-12 w-full lg:mb-0 lg:w-9/12">
+        <header class="mb-8">
+            <h1
+                class="font-header text-3xl font-bold text-slate-100"
+            >
+                <span class="mr-2 text-rose-400">Tag:</span>{{ pageHeaderTitle | title }}
+            </h1>
+        </header>
+        <div class="mt-16 mb-6 pr-4">
+            <ol class="flex flex-col space-y-6 sm:space-y-3">
+                {% for item in postListItems %}
+                    <li class="grid grid-cols-5">
+                        <p class="col-span-5 sm:col-span-1 text-slate-400">
+                            <date>{{ item.data.date | postDateShort }}</date>
+                        </p>
+                        <a href="{{ item.url }}" class="col-span-5 sm:col-span-4 hover:text-rose-400 hover:underline">
+                            {{ item.data.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ol>
+        </div>
+        
+    </div>
+    <aside class="relative w-full lg:mt-20 lg:w-3/12 lg:pl-6">
+    
+        {% include "partials/tags-list-all.njk" %}
+
+    </aside>
+</article>
+
+{% endblock %}

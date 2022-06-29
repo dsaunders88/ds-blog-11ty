@@ -1,0 +1,48 @@
+<article>
+    <div class="grid grid-cols-3 gap-6 mb-6 lg:gap-12">
+        <div class="col-span-3 lg:col-span-2">
+            <header>
+                <div class="mb-4 text-sm text-slate-400">
+                    <date>{{ item.data.date | postDate }}</date>
+
+                    {% if item.data.category %}
+                        <span class="mx-3 font-header font-bold text-rose-400">|</span>
+                        {% for category in item.data.category %}
+                            {{ category | title }}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <h3
+                    class="pb-6 font-header text-3xl font-bold text-slate-100"
+                >
+                    <a href="{{ item.url }}" class="hover:text-rose-400 hover:underline">{{ item.data.title }}</a>
+                </h3>
+            </header>
+            <p class="line-clamp max-w-70ch text-base">{{ item.data.post_summary | safe }}</p>
+        </div>
+        <picture class="thumbnail">
+            {% set imageURL = "./src/" + item.data.post_image.url %}
+            {% set imageAlt = item.data.post_image.alt %}
+            {% image imageURL, imageAlt, "(max-width: 768px) 300px, 600px" %}
+        </picture>
+    </div>
+
+    <footer class="mb-6 grid grid-cols-3 gap-6 lg:gap-12">
+        <div class="col-span-3 pb-12 lg:col-span-2 lg:col-start-2">
+            {% if item.data.tags %}
+                <ol class="flex flex-wrap gap-3">
+                    {% for tag in item.data.tags %}
+                        <li>
+                            <a
+                                href="/tag/{{ tag | slugify }}/"
+                                class="inline-block bg-slate-700 py-1 px-2 text-sm text-slate-200 hover:bg-rose-400 hover:text-slate-900"
+                            >
+                                {{ tag | title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ol>
+            {% endif %}
+        </div>
+    </footer>
+</article>
