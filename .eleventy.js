@@ -69,12 +69,17 @@ module.exports = function (eleventyConfig) {
 		return arr.slice(0, limit);
 	});
 
+	// Set Luxon date time formatting
 	eleventyConfig.addFilter("postDate", (dateObj) => {
-		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_FULL);
+		return DateTime.fromJSDate(dateObj)
+			.setZone("America/Los_Angeles")
+			.toLocaleString(DateTime.DATE_FULL);
 	});
 
 	eleventyConfig.addFilter("postDateShort", (dateObj) => {
-		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_SHORT);
+		return DateTime.fromJSDate(dateObj)
+			.setZone("America/Los_Angeles")
+			.toLocaleString(DateTime.DATE_SHORT);
 	});
 
 	// Image shortcode
