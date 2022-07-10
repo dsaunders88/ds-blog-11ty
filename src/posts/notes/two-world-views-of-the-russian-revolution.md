@@ -10,8 +10,6 @@ tags:
   - history
   - anti-imperialism
   - marxism
-category:
-  - commentary
 date: 2020-09-24
 ---
 

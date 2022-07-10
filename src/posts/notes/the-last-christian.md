@@ -10,8 +10,6 @@ tags:
   - christianity
   - politics
   - reading
-category:
-  - commentary
 date: 2017-01-13
 ---
 

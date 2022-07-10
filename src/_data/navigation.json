@@ -5,11 +5,23 @@
 			"url": "/"
 		},
 		{
-			"text": "Posts",
+			"text": "All Posts",
 			"url": "/posts/"
 		},
 		{
-			"text": "Writing",
+			"text": "Notes",
+			"url": "/posts/notes/"
+		},
+		{
+			"text": "Essays",
+			"url": "/posts/essays/"
+		},
+		{
+			"text": "Lists",
+			"url": "/posts/lists/"
+		},
+		{
+			"text": "Published Writing",
 			"url": "/writing/"
 		},
 		{

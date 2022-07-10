@@ -1,0 +1,14 @@
+<ul class="flex space-x-4 mb-12">
+    <li class="font-header font-bold text-xl">
+        <a class="hover:text-rose-400" href="/posts/">All</a>
+    </li>
+    <li class="font-header font-bold text-xl">
+        <a class="hover:text-rose-400" href="/posts/notes/" {{ helpers.getLinkActiveState("/posts/notes/", page.url) | safe }}>Notes</a>
+    </li>
+    <li class="font-header font-bold text-xl">
+        <a class="hover:text-rose-400" href="/posts/essays/" {{ helpers.getLinkActiveState("/posts/essays/", page.url) | safe }}>Essays</a>
+    </li>
+    <li class="font-header font-bold text-xl">
+        <a class="hover:text-rose-400" href="/posts/lists/" {{ helpers.getLinkActiveState("/posts/lists/", page.url) | safe }}>Lists</a>
+    </li>
+</ul>

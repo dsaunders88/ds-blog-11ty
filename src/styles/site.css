@@ -2,9 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/*@layer base {
+	:root {
+		font-size: 17px;
+	}
+
+	@media only screen and (max-width: 768px) {
+		:root {
+			font-size: 16px;
+		}
+	}
+}*/
+
 @layer components {
 	.blockquote {
-		@apply bg-slate-900 p-6 mb-8;
+		@apply bg-slate-900 p-6 lg:py-8 lg:pl-8 lg:pr-6 mb-8 border-l-2 border-rose-400 relative lg:-left-[34px] italic bg-[url('/assets/low-poly-grid-haikei-black.svg')] bg-cover;
 	}
 
 	.thumbnail {
@@ -32,17 +44,9 @@
 	}
 }
 
-/* @layer base {
-	:root {
-		font-size: 20px;
-	}
-
-	@media only screen and (max-width: 768px) {
-		:root {
-			font-size: 18px;
-		}
-	}
-} */
+* {
+	@apply focus-visible:outline-none focus-visible:ring focus-visible:ring-rose-200;
+}
 
 /* Alpine.js - prevent view before loaded */
 [x-cloak] {
@@ -69,6 +73,20 @@
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
+}
+
+.expanded-opacity {
+	opacity: 0.8 !important;
+}
+
+[data-state="active"],
+[aria-current="page"] {
+	@apply text-rose-400;
+}
+
+#taglist [data-state="active"],
+#taglist [aria-current="page"] {
+	@apply bg-rose-400 text-slate-900;
 }
 
 /* Goodreads widget */
@@ -101,6 +119,15 @@
 	font-size: 16px; /* 1rem */
 	margin-top: 1rem;
 	margin-bottom: 0.5rem;
+}
+
+.gr_custom_book_container_1656358133 img {
+	transform: scale(1);
+	transition: all 200ms;
+}
+
+.gr_custom_book_container_1656358133 img:hover {
+	transform: scale(1.1);
 }
 
 .gr_custom_title_1656358133 a {

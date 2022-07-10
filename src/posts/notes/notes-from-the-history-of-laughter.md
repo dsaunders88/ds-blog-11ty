@@ -9,8 +9,6 @@ post_intro: In <a href="https://books.google.com/books?id=SkswFyhqRIMC" target="
 tags:
   - reading
   - literature
-category:
-  - commentary
 date: 2016-08-31
 ---
 

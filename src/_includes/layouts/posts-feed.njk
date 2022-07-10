@@ -9,7 +9,7 @@
     {% include "partials/posts-header.njk" %}
 
     <div
-        class="container mx-auto px-6 lg:px-8 py-20"
+        class="container mx-auto px-4 lg:px-8 py-20"
     >
         <div class="flex flex-col justify-center lg:flex-row">
             <div class="w-full lg:w-9/12 relative">
@@ -31,6 +31,7 @@
                 </div>
             </div>
             <aside class="relative w-full lg:w-3/12 lg:pl-6">
+                {% include "partials/categories-list-all.njk" %}
             
                 {% include "partials/tags-list-all.njk" %}
 

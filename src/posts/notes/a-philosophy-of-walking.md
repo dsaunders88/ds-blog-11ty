@@ -6,12 +6,11 @@ post_image:
   source: <a href="https://en.wikipedia.org/wiki/Wanderer_above_the_Sea_of_Fog#/media/File:Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg" target="_blank">Wikimedia Commons</a>
 post_summary: Walking is a mode of living that embraces freedom, but this freedom is of a vastly different sort than that offered by the plethora of choices and dependencies that entangle us in the web of our consumerist lives.
 post_intro: Walking is a mode of living that embraces freedom, but this freedom is of a vastly different sort than that offered by the plethora of choices and dependencies that entangle us in the web of our consumerist lives.
+category: notes
 tags:
   - politics
   - reading
   - philosophy
-category:
-  - commentary
 date: 2017-01-12
 ---
 

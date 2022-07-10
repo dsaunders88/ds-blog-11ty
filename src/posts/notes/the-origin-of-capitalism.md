@@ -10,8 +10,6 @@ tags:
   - capitalism
   - history
   - marxism
-category:
-  - précis
 date: 2019-01-11
 ---
 

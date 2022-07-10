@@ -1,13 +1,14 @@
-<p class="mb-6 font-header text-lg font-medium italic lg:mb-10">
+<p class="mb-6 font-header text-lg font-medium italic">
     <i class="fa-duotone fa-tags mr-2 text-rose-400"></i>
         All Tags
 </p>
-<ul class="flex flex-wrap gap-3">
+<ul id="taglist" class="flex flex-wrap gap-3">
     {% for tag in collections.tagList %}
         <li>
             <a
                 href="/tag/{{ tag | slugify }}/"
                 class="inline-block bg-slate-700 py-1 px-2 text-sm text-slate-200 hover:bg-rose-400 hover:text-slate-900"
+                {{ helpers.getLinkActiveState("/tag/" + tag | slugify + "/", page.url) | safe }}
             >
                 {{ tag | title }}
             </a>

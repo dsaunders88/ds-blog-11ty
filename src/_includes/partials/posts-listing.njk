@@ -4,13 +4,8 @@
             <header>
                 <div class="mb-4 text-sm text-slate-400">
                     <date>{{ item.data.date | postDate }}</date>
-
-                    {% if item.data.category %}
-                        <span class="mx-3 font-header font-bold text-rose-400">|</span>
-                        {% for category in item.data.category %}
-                            {{ category | title }}
-                        {% endfor %}
-                    {% endif %}
+                    <span class="mx-0.5 italic">in</span>
+                    <a href="{{ item.data.parentURL }}" class="text-rose-400 underline hover:no-underline">{{ item.data.category | title }}</a>
                 </div>
                 <h3
                     class="pb-6 font-header text-3xl font-bold text-slate-100"

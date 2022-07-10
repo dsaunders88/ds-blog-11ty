@@ -8,8 +8,6 @@ post_summary: Shelving books is, in fact, a dialectical art. Against the rigid, 
 post_intro: "Moving is never a pleasant experience, which is especially true amidst a pandemic and 100°-plus heat waves in Los Angeles. But it is the occasion for an undertaking which is simultaneously both thrilling and exasperating: sorting and re-shelving books."
 tags:
   - reading
-category:
-  - note
 date: 2020-10-05
 ---
 

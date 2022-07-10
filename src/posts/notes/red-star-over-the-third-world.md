@@ -12,8 +12,6 @@ tags:
   - reading
   - history
   - marxism
-category:
-  - review
 date: 2020-08-27
 ---
 

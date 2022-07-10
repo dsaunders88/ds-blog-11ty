@@ -1,7 +1,22 @@
 {% extends "base.njk" %}
 
-{% set pageHeaderTitle = tag %}
-{% set postListItems = collections[tag] | reverse %}
+{% set notes = collections.notes %}
+{% set essays = collections.essays %}
+{% set lists = collections.lists %}
+
+{% if tag %}
+    {% set pageHeaderTitle = tag %}
+    {% set postListItems = collections[tag] | reverse %}
+{% elif page.url == "/posts/notes/" %}
+    {% set pageHeaderTitle = title %}
+    {% set postListItems = notes | reverse %}
+{% elif page.url == "/posts/essays/" %}
+    {% set pageHeaderTitle = title %}
+    {% set postListItems = essays | reverse %}
+{% elif page.url == "/posts/lists/" %}
+    {% set pageHeaderTitle = title %}
+    {% set postListItems = lists | reverse %}
+{% endif %}
 
 {% block content %}
 
@@ -15,17 +30,23 @@
             <h1
                 class="font-header text-3xl font-bold text-slate-100"
             >
-                <span class="mr-2 text-rose-400">Tag:</span>{{ pageHeaderTitle | title }}
+                <span class="mr-2 text-rose-400">
+                    {% if tag %}
+                        Tag:
+                    {% else %}
+                        Category:
+                    {% endif %}
+                </span>{{ pageHeaderTitle | title }}
             </h1>
         </header>
         <div class="mt-16 mb-6 pr-4">
-            <ol class="flex flex-col space-y-6 sm:space-y-3">
+            <ol class="flex flex-col space-y-6 sm:space-y-4">
                 {% for item in postListItems %}
                     <li class="grid grid-cols-5">
                         <p class="col-span-5 sm:col-span-1 text-slate-400">
                             <date>{{ item.data.date | postDateShort }}</date>
                         </p>
-                        <a href="{{ item.url }}" class="col-span-5 sm:col-span-4 hover:text-rose-400 hover:underline">
+                        <a href="{{ item.url }}" class="w-fit col-span-5 sm:col-span-4 hover:text-rose-400 hover:underline">
                             {{ item.data.title }}
                         </a>
                     </li>
@@ -35,6 +56,7 @@
         
     </div>
     <aside class="relative w-full lg:mt-20 lg:w-3/12 lg:pl-6">
+        {% include "partials/categories-list-all.njk" %}
     
         {% include "partials/tags-list-all.njk" %}
 

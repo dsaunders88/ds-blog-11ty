@@ -7,10 +7,7 @@ post_image:
 post_summary: Thomas’ “metaphysics,” if indeed it can be called that, is neither an overarching rationalist system nor a purely sense-oriented empiricism. Perhaps it is ultimately closer to the dialectical materialism of Karl Marx—a philosophy engaged with the flux of material, historical change and humanity’s common interaction with itself and nature—than it is to any Enlightenment idealism.
 post_intro: Part of modern philosophy’s distrust of metaphysics arises from a not undue association of the term with the Rationalist and Idealist philosophers of previous centuries; for thinkers from Spinoza to Hegel the task of metaphysics involves the deduction of an all-encompassing system of reality based on self-evident, a priori propositions, an activity which easily slips into speculation.
 tags:
-  - materialism
   - philosophy
-category:
-  - commentary
 date: 2017-08-30
 ---
 

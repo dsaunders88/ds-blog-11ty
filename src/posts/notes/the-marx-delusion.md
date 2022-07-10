@@ -8,10 +8,7 @@ post_summary: “Materialism for Marx meant starting from what human beings actu
 post_intro: Terry Eagleton’s witty <em>Why Marx Was Right</em> might more accurately be called something like <em>Marxism Is Not What Most People (viz. Those Who Have Strong Opinions on Marx but Have Probably Never Read Him) Think It Is</em>.
 tags:
   - marxism
-  - materialism
   - philosophy
-category:
-  - commentary
 date: 2019-02-13
 ---
 

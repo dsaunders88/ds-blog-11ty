@@ -11,7 +11,7 @@
         >
             <span
                 id="logomark"
-                class="mr-1 inline-block bg-rose-500 px-1 py-1 leading-none text-slate-900"
+                class="mr-1 inline-block bg-rose-500 pt-1.5 px-1 pb-0.5 leading-none text-slate-900"
                 >ds</span
             >
             <span class="group-hover:opacity-80">{{ site.name }}</span>
@@ -106,17 +106,82 @@
             <ul
                 class="flex space-x-8 mr-4"
             >
-                {% for navItem in navigation.navItems %}
-                    <li class="text-lg mx-4 p-4 text-right sm:p-0 sm:text-center">
-                        {% if navItem.text != "Home" %}
-                            <a
-                                href="{{ navItem.url }}"
-                                class="text-slate-900 hover:underline sm:text-slate-200 sm:hover:text-rose-400"
-                                >{{ navItem.text }}</a
+                {% set nav = navigation.navItems %}
+                    <li 
+                        x-data="{
+                            open: false,
+                            toggle() {
+                                if (this.open) {
+                                    return this.close()
+                                }
+
+                                this.$refs.button.focus()
+
+                                this.open = true
+                            },
+                            close(focusAfter) {
+                                if (! this.open) return
+
+                                this.open = false
+
+                                focusAfter && focusAfter.focus()
+                            }
+                        }"
+                        x-on:keydown.escape.prevent.stop="close($refs.button)"
+                        x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+                        x-id="['dropdown-button']"
+                        class="relative text-lg p-4 text-right sm:p-0 sm:text-center">
+                            <button
+                                x-ref="button"
+                                x-on:click="toggle()"
+                                :aria-expanded="open"
+                                :aria-controls="$id('dropdown-button')"
+                                type="button"
+                                class="hover:underline text-slate-200 hover:text-rose-400"
+                                {{ helpers.getLinkActiveState("/posts/", page.url) | safe }}
                             >
-                        {% endif %}
+                                Posts
+                            </button>
+                            <div 
+                                x-ref="panel"
+                                x-show="open"
+                                x-transition
+                                x-on:click.outside="close($refs.button)"
+                                :id="$id('dropdown-button')"
+                                style="display: none;"
+                                class="absolute mt-4 p-4 -left-full w-32 border-t-2 border-rose-400 bg-slate-900">
+                                <ul>
+                                    <li class="py-2">
+                                        <a class="hover:underline text-slate-200 hover:text-rose-400" href="/posts/">All Posts</a>
+                                    </li>
+                                    <li class="py-2">
+                                        <a class="hover:underline text-slate-200 hover:text-rose-400" href="/posts/notes/" {{ helpers.getLinkActiveState("/posts/notes/", page.url) | safe }}>Notes</a>
+                                    </li>
+                                    <li class="py-2">
+                                        <a class="hover:underline text-slate-200 hover:text-rose-400" href="/posts/essays/" {{ helpers.getLinkActiveState("/posts/essays/", page.url) | safe }}>Essays</a>
+                                    </li>
+                                    <li class="py-2">
+                                        <a class="hover:underline text-slate-200 hover:text-rose-400" href="/posts/lists/" {{ helpers.getLinkActiveState("/posts/lists/", page.url) | safe }}>Lists</a>
+                                    </li>
+                                </ul>
+                            </div>
                     </li>
-                {% endfor %}
+                    <li class="text-lg p-4 text-right sm:p-0 sm:text-center">
+                        <a
+                            href="{{ nav[5].url }}"
+                            class="hover:underline text-slate-200 hover:text-rose-400"
+                            {{ helpers.getLinkActiveState(nav[5].url, page.url) | safe }}
+                            >{{ nav[5].text }}</a
+                        >
+                    </li>
+                    <li class="text-lg p-4 text-right sm:p-0 sm:text-center">
+                        <a
+                            href="{{ nav[6].url }}"
+                            class="hover:underline text-slate-200 hover:text-rose-400"
+                            {{ helpers.getLinkActiveState(nav[6].url, page.url) | safe }}
+                            >{{ nav[6].text }}</a
+                        >
+                    </li>
             </ul>
         </nav>
     </div>

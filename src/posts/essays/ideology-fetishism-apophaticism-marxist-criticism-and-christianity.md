@@ -9,12 +9,11 @@ post_intro: "I am very pleased to share my first article published in an academi
 tags:
   - christianity
   - marxism
-category:
-  - paper
+  - "2021"
 date: 2021-04-16
 ---
 
-The paper can be <a href="https://onlinelibrary.wiley.com/share/author/CWFQUUP3ZXEHBGE2HDVM?target=10.1111/nbfr.12642" target="_blank">read online in full here</a>. (Note: if the token has expired on this link, see below for a draft version.) Publication in this journal is especially significant for me, as the Christian-Marxist dialogue that was conducted in its pages (by the likes of Denys Turner and others) has been a strong influence on my intellectual and political development.'
+The paper can be [read online in full here](https://onlinelibrary.wiley.com/share/author/CWFQUUP3ZXEHBGE2HDVM?target=10.1111/nbfr.12642). (Note: if the token has expired on this link, see below for a draft version.) Publication in this journal is especially significant for me, as the Christian-Marxist dialogue that was conducted in its pages (by the likes of Denys Turner and others) has been a strong influence on my intellectual and political development.
 
 ## Abstract
 
@@ -22,4 +21,4 @@ The paper can be <a href="https://onlinelibrary.wiley.com/share/author/CWFQUUP3Z
 
 Nonetheless, Christianity retains the impetus to anti‐fetishism, provided it unites with the Marxist science of critical perception. This anti‐fetishistic union focuses on the transparent and revolutionized social relations of real presence as the nonalienated reverse of fetishism’s false presence. A critical apophaticism, tempered by the materialist amendments of Marika Rose and Slavoj Žižek, offers the bridge to such a union and highlights the anti‐fetishistic avenues of failure and utopia.”
 
-_Read the <a href="https://danieltsaunders.files.wordpress.com/2021/04/ideology-fetishism-apophaticism-web-version.pdf" target="_blank">full draft version of the paper here</a>._
+_Read the [full draft version of the paper here](https://danieltsaunders.files.wordpress.com/2021/04/ideology-fetishism-apophaticism-web-version.pdf)._

@@ -51,7 +51,19 @@ module.exports = function (eleventyConfig) {
 
 	// Custom collections
 	eleventyConfig.addCollection("posts", (collection) => {
-		return [...collection.getFilteredByGlob("./src/posts/*.md")];
+		return [...collection.getFilteredByGlob("./src/posts/**/*.md")];
+	});
+
+	eleventyConfig.addCollection("notes", (collection) => {
+		return collection.getFilteredByGlob("./src/posts/notes/*.md");
+	});
+
+	eleventyConfig.addCollection("essays", (collection) => {
+		return collection.getFilteredByGlob("./src/posts/essays/*.md");
+	});
+
+	eleventyConfig.addCollection("lists", (collection) => {
+		return collection.getFilteredByGlob("./src/posts/lists/*.md");
 	});
 
 	eleventyConfig.addCollection("tagList", (collection) => {
