@@ -28,9 +28,9 @@
     <div class="mb-12 w-full lg:mb-0 lg:w-9/12">
         <header class="mb-8">
             <h1
-                class="font-header text-3xl font-bold text-slate-100"
+                class="font-header text-3xl font-bold dark:text-slate-100"
             >
-                <span class="mr-2 text-rose-400">
+                <span class="mr-2 text-rose-600 dark:text-rose-400">
                     {% if tag %}
                         Tag:
                     {% else %}
@@ -43,10 +43,10 @@
             <ol class="flex flex-col space-y-6 sm:space-y-4">
                 {% for item in postListItems %}
                     <li class="grid grid-cols-5">
-                        <p class="col-span-5 sm:col-span-1 text-slate-400">
+                        <p class="col-span-5 sm:col-span-1 text-zinc-500 dark:text-slate-400">
                             <date>{{ item.data.date | postDateShort }}</date>
                         </p>
-                        <a href="{{ item.url }}" class="w-fit col-span-5 sm:col-span-4 hover:text-rose-400 hover:underline">
+                        <a href="{{ item.url }}" class="w-fit col-span-5 sm:col-span-4 hover:text-rose-600 dark:hover:text-rose-400 hover:underline">
                             {{ item.data.title }}
                         </a>
                     </li>

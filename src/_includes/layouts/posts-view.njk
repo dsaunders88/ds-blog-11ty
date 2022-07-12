@@ -4,21 +4,21 @@
 
 <div class="hero-clipped custom-background absolute inset-0 z-5 h-60 w-full lg:h-[17rem]"></div>
 <div
-    class="container mx-auto max-w-screen-lg px-4 pt-52 pb-20 lg:border-l lg:border-slate-600 lg:px-8"
+    class="container mx-auto max-w-screen-lg px-4 pt-52 pb-20 lg:border-l border-zinc-200 dark:lg:border-slate-600 lg:px-8"
 >
     <article class="article max-w-prose">
 
         <!-- Post header -->
         <header>
-            <h1 class="font-header font-bold text-4xl sm:text-5xl md:text-6xl leading-[1.15] text-slate-200 mb-8 relative z-10">
+            <h1 class="font-header font-bold text-4xl sm:text-5xl md:text-6xl leading-[1.15] text-zinc-800 dark:text-slate-200 mb-8 relative z-10">
                 {{ title }}
             </h1>
             <div class="relative">
-                <div class="mb-6 text-slate-400 xl:mb-12">
+                <div class="mb-8 text-zinc-500 dark:text-slate-400 xl:mb-12">
 
                     <date>{{ date | postDate }}</date>
-                    <span class="mx-0.5 italic">in</span>
-                    <a href="{{ parentURL }}" class="text-rose-400 underline hover:no-underline">{{ category | title }}</a>
+                    <span class="ml-1 mr-0.5 italic">in</span>
+                    <a href="{{ parentURL }}" class="text-rose-600 dark:text-rose-400 underline hover:no-underline">{{ category | title }}</a>
                 </div>
                 <section class="mb-8 flex justify-start flex-col 2xl:absolute 2xl:-left-44 2xl:top-0 2xl:mb-0">
                     <div class="sr-only 2xl:not-sr-only mb-6 font-header text-lg font-medium italic 2xl:mb-4 text-left">Tags</div>
@@ -28,7 +28,7 @@
                                 <li>
                                     <a
                                         href="/tag/{{ tag | slugify }}/"
-                                        class="mx-1 mb-3 inline-block bg-slate-700 py-1 px-2 text-sm text-slate-200 hover:bg-rose-400 hover:text-slate-900"
+                                        class="mx-1 mb-3 inline-block py-1 px-2 text-sm bg-zinc-200 hover:bg-zinc-300 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-rose-400 dark:hover:text-slate-900"
                                         >{{ tag | title }}</a
                                     >
                                 </li>
@@ -40,28 +40,30 @@
         </header>
 
         <!-- Post featured image -->
-        <div class="mb-12">
-            <picture class="feature_image">
-                {% set imageURL = "./src/" + post_image.url %}
-                {% set imageAlt = post_image.alt %}
-                {% image imageURL, imageAlt, "(max-width: 768px) 600px, 900px" %}
-            </picture>
-            <div class="text-sm italic leading-snug text-slate-400 pt-4">
-                <span>{{ post_image.alt }}</span>
-                {% if post_image.source %}
-                    <span class="mx-2">|</span>
-                    <span class="image_credit">{{ post_image.source | safe }}</span>
-                {% endif %}
+        {% if post_image %}
+            <div class="mb-12">
+                <picture class="feature_image">
+                    {% set imageURL = "./src/" + post_image.url %}
+                    {% set imageAlt = post_image.alt %}
+                    {% image imageURL, imageAlt, "(max-width: 768px) 600px, 900px" %}
+                </picture>
+                <div class="text-sm italic leading-snug text-zinc-500 dark:text-slate-400 pt-4">
+                    <span>{{ post_image.alt }}</span>
+                    {% if post_image.source %}
+                        <span class="mx-2">|</span>
+                        <span class="image_credit">{{ post_image.source | safe }}</span>
+                    {% endif %}
+                </div>
             </div>
-        </div>
+        {% endif %}
 
         <!-- Post intro paragraph -->
-        <div class="relative mb-8 leading-normal text-2xl text-slate-200 prose-a:text-rose-400 prose-a:underline hover:prose-a:no-underline first-letter:text-rose-400 first-letter:font-bold first-letter:text-7xl first-letter:float-left first-letter:mb-0 first-letter:mt-4 first-letter:mr-4 first-letter:leading-[0.5]">
+        <div class="relative mb-8 leading-normal text-2xl text-zinc-800 prose-a:text-rose-600 first-letter:text-rose-600 dark:text-slate-200 dark:prose-a:text-rose-400 prose-a:underline hover:prose-a:no-underline dark:first-letter:text-rose-400 first-letter:font-bold first-letter:text-7xl first-letter:float-left first-letter:mb-0 first-letter:mt-4 first-letter:mr-4 first-letter:leading-[0.5]">
             {{ post_intro | safe }}
         </div>
 
         <!-- Post body -->
-        <div class="leading-normal max-w-[59ch] prose-p:mb-8 prose-a:text-rose-400 prose-a:underline hover:prose-a:no-underline prose-headings:font-header prose-headings:font-bold prose-headings:text-3xl prose-headings:text-slate-200 prose-headings:mb-8 prose-headings:mt-20 first:prose-headings:mt-0 prose-ul:list-disc marker:prose-ul:text-rose-400">
+        <div class="leading-[1.6] max-w-[59ch] prose-p:mb-8 prose-a:text-rose-600 dark:prose-a:text-rose-400 prose-a:underline hover:prose-a:no-underline prose-headings:font-header prose-headings:font-bold prose-headings:text-3xl dark:prose-headings:text-slate-200 prose-headings:mb-8 prose-headings:mt-20 first:prose-headings:mt-0 prose-ul:list-disc marker:prose-ul:text-rose-600 dark:marker:prose-ul:text-rose-400">
             {{ content | safe }}
         </div>
 
@@ -73,15 +75,15 @@
             {% if previousPost %}
                 <div class="w-full md:w-1/2">
                     <span class="font-header font-medium text-lg italic block mb-6">
-                        <i class="fa-duotone fa-backward mr-2 text-rose-400"></i>
+                        <i class="fa-duotone fa-backward mr-2 text-rose-600 dark:text-rose-400"></i>
                         Previous Post
                     </span>
-                    <div class="mb-2 text-sm text-slate-400">
+                    <div class="mb-2 text-sm text-zinc-500 dark:text-slate-400">
                         <date>{{ previousPost.data.date | postDate }}</date>
                         <span class="mx-0.5 italic">in</span>
-                        <a href="{{ previousPost.data.parentURL }}" class="text-rose-400 underline hover:no-underline">{{ previousPost.data.category | title }}</a>
+                        <a href="{{ previousPost.data.parentURL }}" class="text-rose-600 dark:text-rose-400 underline hover:no-underline">{{ previousPost.data.category | title }}</a>
                     </div>
-                    <a href="{{ previousPost.url }}" class="text-slate-200 text-2xl hover:text-rose-400 hover:underline font-header font-bold">{{ previousPost.data.title }}</a>
+                    <a href="{{ previousPost.url }}" class="dark:text-slate-200 text-2xl hover:text-rose-600 dark:hover:text-rose-400 hover:underline font-header font-bold">{{ previousPost.data.title }}</a>
                 </div>
             {% endif %}
 
@@ -89,14 +91,14 @@
                 <div class="w-full md:w-1/2">
                     <span class="font-header font-medium text-lg italic block mb-6">
                         Next Post
-                        <i class="fa-duotone fa-forward ml-2 text-rose-400"></i>
+                        <i class="fa-duotone fa-forward ml-2 text-rose-600 dark:text-rose-400"></i>
                     </span>
-                    <div class="mb-2 text-sm text-slate-400">
+                    <div class="mb-2 text-sm text-zinc-500 dark:text-slate-400">
                         <date>{{ nextPost.data.date | postDate }}</date>
                         <span class="mx-0.5 italic">in</span>
-                        <a href="{{ nextPost.data.parentURL }}" class="text-rose-400 underline hover:no-underline">{{ nextPost.data.category | title }}</a>
+                        <a href="{{ nextPost.data.parentURL }}" class="text-rose-600 dark:text-rose-400 underline hover:no-underline">{{ nextPost.data.category | title }}</a>
                     </div>
-                    <a href="{{ nextPost.url }}" class="text-slate-200 text-2xl hover:text-rose-400 hover:underline font-header font-bold">{{ nextPost.data.title }}</a>
+                    <a href="{{ nextPost.url }}" class="dark:text-slate-200 text-2xl hover:text-rose-600 dark:hover:text-rose-400 hover:underline font-header font-bold">{{ nextPost.data.title }}</a>
                 </div>
             {% endif %}
 

@@ -10,6 +10,7 @@ tags:
   - reading
   - literature
   - marxism
+  - "2019"
 date: 2019-08-20
 ---
 

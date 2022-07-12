@@ -2,24 +2,28 @@
     <div class="grid grid-cols-3 gap-6 mb-6 lg:gap-12">
         <div class="col-span-3 lg:col-span-2">
             <header>
-                <div class="mb-4 text-sm text-slate-400">
+                <div class="mb-4 text-sm text-zinc-500 dark:text-slate-400">
                     <date>{{ item.data.date | postDate }}</date>
                     <span class="mx-0.5 italic">in</span>
-                    <a href="{{ item.data.parentURL }}" class="text-rose-400 underline hover:no-underline">{{ item.data.category | title }}</a>
+                    <a href="{{ item.data.parentURL }}" class="text-rose-600 dark:text-rose-400 underline hover:no-underline">{{ item.data.category | title }}</a>
                 </div>
                 <h3
-                    class="pb-6 font-header text-3xl font-bold text-slate-100"
+                    class="pb-6 font-header text-3xl font-bold dark:text-slate-100"
                 >
-                    <a href="{{ item.url }}" class="hover:text-rose-400 hover:underline">{{ item.data.title }}</a>
+                    <a href="{{ item.url }}" class="hover:text-rose-600 dark:hover:text-rose-400 hover:underline">{{ item.data.title }}</a>
                 </h3>
             </header>
             <p class="line-clamp max-w-70ch text-base">{{ item.data.post_summary | safe }}</p>
         </div>
-        <picture class="thumbnail">
-            {% set imageURL = "./src/" + item.data.post_image.url %}
-            {% set imageAlt = item.data.post_image.alt %}
-            {% image imageURL, imageAlt, "(max-width: 768px) 300px, 600px" %}
-        </picture>
+        {% if item.data.post_image %}
+            <picture class="thumbnail rounded-full">
+                {% set imageURL = "./src/" + item.data.post_image.url %}
+                {% set imageAlt = item.data.post_image.alt %}
+                {% image imageURL, imageAlt, "(max-width: 768px) 300px, 600px" %}
+            </picture>
+        {% else %}
+            <div class="invisible order-first col-span-3 lg:col-span-1 lg:float-right lg:justify-self-end"></div>
+        {% endif %}
     </div>
 
     <footer class="mb-6 grid grid-cols-3 gap-6 lg:gap-12">
@@ -30,7 +34,7 @@
                         <li>
                             <a
                                 href="/tag/{{ tag | slugify }}/"
-                                class="inline-block bg-slate-700 py-1 px-2 text-sm text-slate-200 hover:bg-rose-400 hover:text-slate-900"
+                                class="inline-block py-1 px-2 text-sm bg-zinc-200 hover:bg-zinc-300 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-rose-400 dark:hover:text-slate-900"
                             >
                                 {{ tag | title }}
                             </a>

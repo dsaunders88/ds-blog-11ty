@@ -9,6 +9,7 @@ post_intro: “Cardboard Darwinism,” writes biologist Stephen Jay Gould in an 
 tags:
   - science
   - marxism
+  - "2020"
 date: 2020-11-05
 ---
 

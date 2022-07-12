@@ -11,6 +11,7 @@ tags:
   - politics
   - reading
   - philosophy
+  - "2017"
 date: 2017-01-12
 ---
 

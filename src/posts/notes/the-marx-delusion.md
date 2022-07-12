@@ -9,6 +9,7 @@ post_intro: Terry Eagleton’s witty <em>Why Marx Was Right</em> might more accu
 tags:
   - marxism
   - philosophy
+  - "2019"
 date: 2019-02-13
 ---
 

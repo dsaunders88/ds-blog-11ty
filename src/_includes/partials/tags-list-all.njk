@@ -1,5 +1,5 @@
 <p class="mb-6 font-header text-lg font-medium italic">
-    <i class="fa-duotone fa-tags mr-2 text-rose-400"></i>
+    <i class="fa-duotone fa-tags mr-2 text-rose-600 dark:text-rose-400"></i>
         All Tags
 </p>
 <ul id="taglist" class="flex flex-wrap gap-3">
@@ -7,7 +7,7 @@
         <li>
             <a
                 href="/tag/{{ tag | slugify }}/"
-                class="inline-block bg-slate-700 py-1 px-2 text-sm text-slate-200 hover:bg-rose-400 hover:text-slate-900"
+                class="inline-block py-1 px-2 text-sm bg-zinc-200 hover:bg-zinc-300 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-rose-400 dark:hover:text-slate-900"
                 {{ helpers.getLinkActiveState("/tag/" + tag | slugify + "/", page.url) | safe }}
             >
                 {{ tag | title }}

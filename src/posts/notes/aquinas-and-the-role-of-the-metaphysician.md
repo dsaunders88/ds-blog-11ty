@@ -8,6 +8,7 @@ post_summary: Thomas’ “metaphysics,” if indeed it can be called that, is n
 post_intro: Part of modern philosophy’s distrust of metaphysics arises from a not undue association of the term with the Rationalist and Idealist philosophers of previous centuries; for thinkers from Spinoza to Hegel the task of metaphysics involves the deduction of an all-encompassing system of reality based on self-evident, a priori propositions, an activity which easily slips into speculation.
 tags:
   - philosophy
+  - "2017"
 date: 2017-08-30
 ---
 

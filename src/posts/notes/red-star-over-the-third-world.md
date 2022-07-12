@@ -12,6 +12,7 @@ tags:
   - reading
   - history
   - marxism
+  - "2020"
 date: 2020-08-27
 ---
 
