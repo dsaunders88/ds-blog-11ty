@@ -137,7 +137,7 @@
 }
 
 .gr_custom_title_1656358133 a {
-	color: #e2e8f0; /* Slate 200 */
+	@apply dark:text-slate-100;
 	text-decoration-line: none;
 }
 
