@@ -29,11 +29,11 @@ permalink: /writing/index.html
 
 ## Academic Articles
 
-- <a href="/posts/ideology-fetishism-apophaticism-marxist-criticism-and-christianity/">Ideology, Fetishism, Apophaticism: Marxist Criticism and Christianity</a><br>
+- <a href="/posts/essays/ideology-fetishism-apophaticism-marxist-criticism-and-christianity/">Ideology, Fetishism, Apophaticism: Marxist Criticism and Christianity</a><br>
   _New Blackfriars_, 2021
 
-- Justice, Peace, and Transnational Solidarity: The Tricontinental Conference and Latin American Liberationist Christianity<br>
-  In progress
+- <a href="/posts/essays/the-tricontinental-conference-and-latin-american-liberationist-christianity/">Justice, Peace, and Transnational Solidarity: The Tricontinental Conference and Latin American Liberationist Christianity</a><br>
+  _In progress_
 
 - From Christian Socialism to Communism: The Class Limits of the Social Gospel<br>
-  In progress
+  _In progress_
