@@ -5,7 +5,7 @@ page_summary: A “now” page is like a traditional about page but is focused o
 permalink: /now/index.html
 ---
 
-I’m Daniel Saunders, a Midwesterner in Los Angeles. This site is meant to be a (probably infrequent) chronicle of the things I’m reading and thinking about.
+I’m Daniel Saunders, a Midwesterner in Los Angeles. This site is meant to be a (probably infrequent) chronicle of the things I’m reading and thinking about. Get in touch at [my email](mailto:daniel.thomas.saunders@gmail).
 
 ## Projects
 

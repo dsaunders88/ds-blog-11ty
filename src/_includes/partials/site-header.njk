@@ -19,16 +19,16 @@
 
         <div class="flex items-center">
             <!-- Dark Mode Toggle -->
-            <div class="relative text-sm text-center sm:p-0 sm:text-center mr-4 md:mr-8"
+            <div class="relative text-sm text-center sm:p-0 sm:text-center mr-1 md:mr-6"
                 >
                     <button
                         x-ref="button"
                         type="button"
                         id="themeToggle"
-                        class="hover:underline py-1.5 px-3 rounded-lg dark:text-slate-200 dark:hover:text-rose-400"
+                        class="hover:underline text-lg py-1.5 px-3 rounded-lg dark:text-slate-200 dark:hover:text-rose-400"
                     >
-                        <span class="hidden" id="themeToggleLight"><i class="fa-solid fa-brightness mr-1"></i>Light</span>
-                        <span class="hidden" id="themeToggleDark"><i class="fa-solid fa-moon mr-1"></i>Dark</span>
+                        <span class="hidden" id="themeToggleLight"><i class="fa-solid fa-brightness"></i><span class="sr-only">Light</span></span>
+                        <span class="hidden" id="themeToggleDark"><i class="fa-solid fa-moon"></i><span class="sr-only">Dark</span></span>
                     </button>
             </div>
 
@@ -157,6 +157,7 @@
                                 {{ helpers.getLinkActiveState("/posts/", page.url) | safe }}
                             >
                                 Posts
+                                <span class="text-xs relative left-1 -top-0.5"><i class="fa-regular fa-chevron-down"></i></span>
                             </button>
                             <div 
                                 x-ref="panel"

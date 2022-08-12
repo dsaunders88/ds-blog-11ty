@@ -55,18 +55,18 @@ if (
 		window.matchMedia("(prefers-color-scheme: dark)").matches)
 ) {
 	themeToggleDark.classList.remove("hidden");
-    themeToggle.classList.add("bg-slate-700");
+    themeToggle.classList.add("hover:bg-slate-700");
 } else {
 	themeToggleLight.classList.remove("hidden");
-    themeToggle.classList.add("bg-rose-100");
+    themeToggle.classList.add("hover:bg-rose-100");
 }
 
 themeToggle.addEventListener("click", function() {
     // Toggle icons
     themeToggleDark.classList.toggle("hidden");
     themeToggleLight.classList.toggle("hidden");
-    themeToggle.classList.toggle("bg-rose-100");
-    themeToggle.classList.toggle("bg-slate-700");
+    themeToggle.classList.toggle("hover:bg-rose-100");
+    themeToggle.classList.toggle("hover:bg-slate-700");
 
     // If set via local storage previously
     if (localStorage.theme) {
