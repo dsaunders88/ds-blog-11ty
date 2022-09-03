@@ -1,6 +1,7 @@
 const { DateTime } = require("luxon");
 const Image = require("@11ty/eleventy-img");
 const htmlMinTransform = require("./src/transforms/html-min-transform.js");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 async function imageShortcode(src, alt, sizes = "100vw") {
 	if (alt === undefined) {
@@ -94,6 +95,9 @@ module.exports = function (eleventyConfig) {
 			.setZone("America/Los_Angeles")
 			.toLocaleString(DateTime.DATE_SHORT);
 	});
+
+	// RSS plugin
+	eleventyConfig.addPlugin(pluginRss);
 
 	// Image shortcode
 	eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
