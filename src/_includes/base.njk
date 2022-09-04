@@ -89,17 +89,27 @@ themeToggle.addEventListener("click", function() {
         }
     }
 });
-
-// Netlify Identity 
-if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-    if (!user) {
-        window.netlifyIdentity.on("login", () => {
-        document.location.href = "/admin/";
-        });
-    }
-    });
-}
 </script>
+
+{% if page.url == "/" %}
+<script>
+    async function getRandomPostFromRss() {
+        let allPosts = [];
+        let randomPost = '';
+        const xmlFetch = await fetch("/rss-feed.xml")
+        const xmlText = await xmlFetch.text()
+        const xml = await (new window.DOMParser()).parseFromString(xmlText, "text/xml")
+        const entries = xml.getElementsByTagName("entry")
+        for (entry of entries) {
+            allPosts.push(entry.getElementsByTagName("id")[0].childNodes[0].nodeValue)
+        }
+        randomPost = allPosts[Math.floor(Math.random()*allPosts.length)]
+        //console.log(randomPost)
+        document.getElementById("randomPostButton").href = randomPost
+        return false
+    }
+    getRandomPostFromRss()
+</script>
+{% endif %}
 </body>
 </html>
