@@ -93,6 +93,7 @@ themeToggle.addEventListener("click", function() {
 
 {% if page.url == "/" %}
 <script>
+    // Grab a random post from the RSS feed and set it to the "Random Post" button on the home page
     async function getRandomPostFromRss() {
         let allPosts = [];
         let randomPost = '';
@@ -104,7 +105,6 @@ themeToggle.addEventListener("click", function() {
             allPosts.push(entry.getElementsByTagName("id")[0].childNodes[0].nodeValue)
         }
         randomPost = allPosts[Math.floor(Math.random()*allPosts.length)]
-        //console.log(randomPost)
         document.getElementById("randomPostButton").href = randomPost
         return false
     }

@@ -5,7 +5,7 @@ page_summary: A “now” page is like a traditional about page but is focused o
 permalink: /now/index.html
 ---
 
-I’m Daniel Saunders, a Midwesterner in Los Angeles. This site is meant to be a (probably infrequent) chronicle of the things I’m reading and thinking about. Get in touch at [my email](mailto:daniel.thomas.saunders@gmail).
+I’m Daniel Saunders, a designer, reader, and writer with somewhat eclectic interests, as you might have gathered from looking around this site. In real life I’m just as likely to be thinking about philosophical and social questions as I am coding problems, so that is what is reflected here! Get in touch at [my email](mailto:daniel.thomas.saunders@gmail).
 
 ## Projects
 
