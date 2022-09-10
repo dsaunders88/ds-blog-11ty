@@ -5,6 +5,7 @@
 	"url": "https://daniel-saunders.com/",
 	"favicon": "/assets/ds-logo.svg",
 	"socialLinks": {
+		"rss": "https://daniel-saunders.com/rss-feed.xml",
 		"twitter": "https://twitter.com/dothedan",
 		"github": "https://github.com/dsaunders88",
 		"soundcloud": "https://soundcloud.com/daniel-saunders-space"

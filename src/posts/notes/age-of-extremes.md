@@ -5,7 +5,7 @@ post_image:
   alt: Black and white photo of a Soviet woman looking at fallen hammer and sickle emblem.
   source: <a href="https://www.theatlantic.com/photo/2011/12/20-years-since-the-fall-of-the-soviet-union/100214/">The Atlantic</a>
 post_summary: As tempting as it is to fantasize on what could have been, the historian’s task, Hobsbawm quips, is to analyze what was. And so despite his sympathies and disappointments, Hobsbawm does what no ideological historian can do, but which only the best Marxist thinkers are capable of.
-post_intro: Eric J. Hobsbawm’s <em>The Age of Extremes</em> (1994) stands unequaled as a penetrating history of the “Short Twentieth Century”—the period from the First World War and the traumatic end of the “Long Nineteenth Century” of liberal bourgeois progress to the end of “really existing socialism” and the fight against global capitalism.
+post_intro: Eric J. Hobsbawm’s <em>The Age of Extremes</em> (1994) stands unequaled as a penetrating history of the “Short Twentieth Century”—the designation he gives the period from the First World War (itself the traumatic end of the “Long Nineteenth Century” of liberal progress) to the end of “really existing socialism” in the early 1990s.
 category: essays
 tags:
   - reading
