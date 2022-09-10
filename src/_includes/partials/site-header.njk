@@ -94,6 +94,11 @@
                             </ul>
                             <ul class="flex space-x-10 mt-12">
                                 <li>
+                                    <a href="{{ site.socialLinks.rss }}" class="hover:opacity-80">
+                                        <i class="fa-solid fa-rss"><span class="sr-only">RSS</span></i>
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="{{ site.socialLinks.twitter }}" class="hover:opacity-80">
                                         <i class="fa-brands fa-twitter"><span class="sr-only">Twitter</span></i>
                                     </a>
@@ -166,7 +171,7 @@
                                 @click.outside="close($refs.button)"
                                 :id="$id('dropdown-button')"
                                 style="display: none;"
-                                class="absolute mt-4 p-4 -left-full w-32 border-t-2 border-zinc-800 bg-zinc-50 dark:border-rose-400 dark:bg-slate-900">
+                                class="absolute mt-4 p-4 left-[-70%] w-32 border-t-2 border-zinc-800 bg-zinc-50 dark:border-rose-400 dark:bg-slate-900">
                                 <ul>
                                     <li class="py-2 dark:text-slate-200">
                                         <a class="hover:underline hover:text-rose-600 dark:hover:text-rose-400" href="/posts/">All Posts</a>

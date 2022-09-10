@@ -86,14 +86,16 @@ module.exports = function (eleventyConfig) {
 	// Set Luxon date time formatting
 	eleventyConfig.addFilter("postDate", (dateObj) => {
 		return DateTime.fromJSDate(dateObj)
-			.setZone("America/Los_Angeles")
-			.toLocaleString(DateTime.DATE_FULL);
+			.toUTC().toLocaleString(DateTime.DATE_FULL);
+			//.setZone("America/Los_Angeles")
+			//.toLocaleString(DateTime.DATE_FULL);
 	});
 
 	eleventyConfig.addFilter("postDateShort", (dateObj) => {
 		return DateTime.fromJSDate(dateObj)
-			.setZone("America/Los_Angeles")
-			.toLocaleString(DateTime.DATE_SHORT);
+			.toUTC().toLocaleString(DateTime.DATE_SHORT);
+			//.setZone("America/Los_Angeles")
+			//.toLocaleString(DateTime.DATE_SHORT);
 	});
 
 	// RSS plugin
