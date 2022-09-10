@@ -7,8 +7,8 @@ post_image:
 post_summary: In 1966, the Tricontinental Conference convened in Havana, Cuba, bringing together over 500 delegates from 82 countries in Asia, Africa, and Latin America under the banner of anti-colonial, anti-imperialist solidarity and national self-determination.
 post_intro: "I am presenting a working paper at the Toronto Christian Left Conference (July 23-24), whose theme is *Rethinking the Christian Left from the Belly of Empire: Charting New Paths Beyond Colonization*."
 tags:
-  - anti-imperialism
-  - christianity
+  - socialism
+  - religion
   - history
   - "2021"
 date: 2021-07-20

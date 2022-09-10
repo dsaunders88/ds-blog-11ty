@@ -7,7 +7,7 @@ post_image:
 post_summary: Christianity retains the impetus to anti‐fetishism, provided it unites with the Marxist science of critical perception.
 post_intro: "I am very pleased to share my first article published in an academic journal, “Ideology, Fetishism, Apophaticism: Marxist Criticism and Christianity,” which is forthcoming in the Dominican journal <em>New Blackfriars</em>."
 tags:
-  - christianity
+  - religion
   - marxism
   - "2021"
 date: 2021-04-16

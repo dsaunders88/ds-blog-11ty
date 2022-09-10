@@ -8,7 +8,7 @@ post_summary: "In the introduction to <em>Arvo Pärt: Out of Silence</em>, theol
 post_intro: "It was the moment of the concert program that we all anticipated, one that would be sure to transfix the audience—the moment our college choir, each night on a trip through Europe, would sing Arvo Pärt’s radiant <em>Magnificat</em> (1989)."
 tags:
   - music
-  - christianity
+  - religion
   - reading
   - "2015"
 date: 2015-06-16

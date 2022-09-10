@@ -8,7 +8,7 @@ post_summary: Walter Rodney’s rejection of rigid models of historical interpre
 post_intro: "<em>The Russian Revolution: A View from the Third World</em> (Verso, 2018) compiles a series of lectures given by Walter Rodney, the black Guyanese radical, at the University of Dar es Salaam in Tanzania."
 tags:
   - history
-  - anti-imperialism
+  - philosophy
   - marxism
   - "2020"
 date: 2020-09-24

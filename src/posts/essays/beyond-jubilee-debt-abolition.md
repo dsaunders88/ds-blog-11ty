@@ -7,7 +7,7 @@ post_image:
 post_summary: "Review of Haymarket’s <em>Can’t Pay, Won’t Pay: The Case for Economic Disobedience and Debt Abolition</em> for <em>The Bias</em> magazine."
 post_intro: "<em>Can’t Pay, Won’t Pay: The Case for Economic Disobedience and Debt Abolition</em> is an excellent new book from Haymarket that I have reviewed for <em>The Bias</em> magazine."
 tags:
-  - christianity
+  - religion
   - socialism
   - reading
   - "2021"

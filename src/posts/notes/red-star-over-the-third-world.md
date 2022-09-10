@@ -7,7 +7,6 @@ post_image:
 post_summary: Nothing could be the same in the world after 1917, for “what should never have been became real”—a society where the oppressed masses had overthrown the oppressing classes and where “a total change in the life of the people” was being made.
 post_intro: Vijay Prashad’s <em>Red Star Over the Third World</em> is an explosive little book that admirably conveys the profound impact of the October Revolution and its continued influence for communist movements in the Third World—with a focus here on Asia, the Middle East, and Latin America.
 tags:
-  - anti-imperialism
   - socialism
   - reading
   - history

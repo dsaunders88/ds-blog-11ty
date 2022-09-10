@@ -8,6 +8,7 @@ post_summary: The music brings out this sense of inexorableness that the text si
 post_intro: “Ruht wohl, ihr heiligen Gebeine” is the magisterial concluding chorus to Bach’s <em>Johannes-Passion</em>.
 tags:
   - music
+  - religion
   - "2021"
 date: 2021-04-02
 ---

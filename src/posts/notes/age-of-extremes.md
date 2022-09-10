@@ -11,6 +11,7 @@ tags:
   - reading
   - history
   - marxism
+  - politics
   - "2021"
 date: 2021-09-17
 ---
