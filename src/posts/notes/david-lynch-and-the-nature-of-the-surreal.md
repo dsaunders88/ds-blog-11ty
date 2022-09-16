@@ -4,7 +4,7 @@ post_image:
   url: /assets/eraserhead.jpg
   alt: Eraserhead (1977) still.
   source: <a href="https://film-grab.com/2013/02/01/eraserhead/" target="_blank">Film Grab</a>
-post_summary: Walter Rodney’s rejection of rigid models of historical interpretation and “necessary” trajectories of socialist development transcends Cold War limitations. Instead, his authentic use of Marxist historical materialism impels him to begin, per Lenin, with the “concrete analysis of concrete conditions.”
+post_summary: The cinema of David Lynch, true to the spirit of its Surrealist predecessors in art and film, has always resisted conventional characterization or description.
 post_intro: "The cinema of David Lynch, true to the spirit of its Surrealist predecessors in art and film, has always resisted conventional characterization or description."
 tags:
   - film
