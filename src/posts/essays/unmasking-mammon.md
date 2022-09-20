@@ -7,8 +7,9 @@ post_image:
 post_summary: "Review of Haymarket’s <em>A People’s Guide to Capitalism: An Introduction to Marxist Economics</em>, for <em>The Bias</em> magazine."
 post_intro: "I had the privilege of reviewing Hadas Thier’s new book, <em>A People’s Guide to Capitalism: An Introduction to Marxist Economics</em> (Haymarket), for <em>The Bias</em> magazine."
 tags:
-  - marxism
+  - capitalism
   - socialism
+  - theory
   - reading
   - "2020"
 date: 2020-09-15

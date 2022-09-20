@@ -9,7 +9,7 @@ post_intro: As a guide to understanding the cultural mythology and socio-geograp
 tags:
   - reading
   - literature
-  - marxism
+  - theory
   - "2019"
 date: 2019-08-20
 ---

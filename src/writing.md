@@ -5,7 +5,7 @@ page_summary: I occasionally write pieces at various outlets, and I am working o
 permalink: /writing/index.html
 ---
 
-## Reviews & Articles
+## Selected Reviews & Articles
 
 - <a href="https://theecologist.org/2021/apr/09/koyaanisqatsi-dialectical-ecology" target="_blank">From Koyaanisqatsi to Dialectical Ecology</a><br>
   _The Ecologist_<br>

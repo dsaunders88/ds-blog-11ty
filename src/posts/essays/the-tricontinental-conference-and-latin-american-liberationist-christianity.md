@@ -14,7 +14,7 @@ tags:
 date: 2021-07-20
 ---
 
-As an offering to this discussion, I am centering the [Tricontinental Conference of 1966](https://utopix.cc/content/the-tricontinental-conference-the-right-to-our-history/) and Latin American liberationist Christianity as a way to think about anti-imperialism and transnational solidarity from a Global South Christian perspective. The abstract for this working paper is below ([read the full version here](https://bit.ly/36YsdAm)):
+As an offering to this discussion, I am centering the [Tricontinental Conference of 1966](https://utopix.cc/content/the-tricontinental-conference-the-right-to-our-history/) and Latin American liberationist Christianity as a way to think about anti-imperialism and transnational solidarity from a Global South Christian perspective. The abstract for this working paper is below ([read the full version here](https://drive.google.com/file/d/1IBc4PWb0JQlSmHHevPhRmgtoQozlykkt/view?usp=sharing)):
 
 ## Abstract
 
@@ -27,4 +27,4 @@ A fundamental question emerges from this survey: what does Tricontinentalism mea
 _One of the most exciting remnants of this history are the incredible solidarity posters put out by OSPAAAL, some of which you can
 [see here](https://www.jstor.org/site/wofford/lindsay-webster-collection-of-cuban-posters/). Additionally, many of the Tricontinental journals are viewable online at [The Freedom Archives](https://search.freedomarchives.org/search.php?view_collection=1035)._
 
-_Read the full version of the [working paper here](https://bit.ly/36YsdAm)._
+_Read the full version of the [working paper here](https://drive.google.com/file/d/1IBc4PWb0JQlSmHHevPhRmgtoQozlykkt/view?usp=sharing)._

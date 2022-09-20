@@ -9,7 +9,7 @@ post_intro: "There is a story told about capitalism—mostly by its proponents: 
 tags:
   - capitalism
   - history
-  - marxism
+  - theory
   - "2019"
 date: 2019-01-11
 ---

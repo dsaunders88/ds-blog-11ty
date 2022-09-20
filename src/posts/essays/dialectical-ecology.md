@@ -7,8 +7,9 @@ post_image:
 post_summary: Nature has a specific history. This is a history in which organic life, inclusive of humanity, acts on and changes the world, at the same time as the world acts on and changes organic life.
 post_intro: “If we dig precious things from the land, we will invite disaster.” Thus reads one of the Hopi prophecies which echo throughout Philip Glass’s <a href="https://youtu.be/OacVy8_nJi0">haunting soundtrack</a> for <em>Koyaanisqatsi</em> (1982).
 tags:
-  - marxism
+  - theory
   - science
+  - socialism
   - "2020"
 date: 2020-10-25
 ---

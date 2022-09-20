@@ -8,7 +8,8 @@ post_summary: Christianity retains the impetus to anti‐fetishism, provided it 
 post_intro: "I am very pleased to share my first article published in an academic journal, “Ideology, Fetishism, Apophaticism: Marxist Criticism and Christianity,” which is forthcoming in the Dominican journal <em>New Blackfriars</em>."
 tags:
   - religion
-  - marxism
+  - theory
+  - capitalism
   - "2021"
 date: 2021-04-16
 ---
@@ -21,4 +22,4 @@ The paper can be [read online in full here](https://onlinelibrary.wiley.com/shar
 
 Nonetheless, Christianity retains the impetus to anti‐fetishism, provided it unites with the Marxist science of critical perception. This anti‐fetishistic union focuses on the transparent and revolutionized social relations of real presence as the nonalienated reverse of fetishism’s false presence. A critical apophaticism, tempered by the materialist amendments of Marika Rose and Slavoj Žižek, offers the bridge to such a union and highlights the anti‐fetishistic avenues of failure and utopia.”
 
-_Read the [full draft version of the paper here](https://danieltsaunders.files.wordpress.com/2021/04/ideology-fetishism-apophaticism-web-version.pdf)._
+_Read the [full draft version of the paper here](https://drive.google.com/file/d/1TO3thHDzvO8nK0amP4r5z_cCnW1xjzRq/view?usp=sharing)._

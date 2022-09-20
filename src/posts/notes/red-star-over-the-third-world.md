@@ -10,7 +10,7 @@ tags:
   - socialism
   - reading
   - history
-  - marxism
+  - socialism
   - "2020"
 date: 2020-08-27
 ---
