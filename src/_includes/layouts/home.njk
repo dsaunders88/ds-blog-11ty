@@ -36,8 +36,8 @@
     </article>
 
 <!-- Posts -->
-<div id="categoryGrid" class="container mx-auto max-w-screen-lg px-4 pt-20 pb-40 grid grid-cols-1 md:grid-cols-2 gap-8">
-    <div class="col-span-1 md:col-span-2">
+<div id="categoryGrid" class="container mx-auto max-w-screen-xl px-4 pt-20 pb-40 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="col-span-1 md:col-span-2 order-1">
         <p class="font-header text-lg font-medium italic">
          <i class="fa-duotone fa-calendar-day mr-2 text-rose-600 dark:text-rose-400"></i>
             Recent Posts
@@ -46,11 +46,12 @@
     <!-- First card -->
     <div
         x-data="{ expanded: false }"
+        class="order-2 md:order-3"
     >
         <article 
             @click="expanded =! expanded"
             :class="{ 'shadow-md dark:shadow-xl': expanded }"
-            class="p-10 rounded-md bg-zinc-100 dark:bg-slate-900 hover:cursor-pointer group relative"
+            class="p-8 rounded-md bg-zinc-100 dark:bg-slate-900 hover:cursor-pointer group relative"
         >
             <div 
                 :class="{ 'expanded-opacity': expanded }"
@@ -106,11 +107,12 @@
     <!-- Second card -->
     <div
         x-data="{ expanded: false }"
+        class="order-3 md:order-4"
     >
         <article 
             @click="expanded =! expanded"
             :class="{ 'shadow-md dark:shadow-xl': expanded }"
-            class="p-10 rounded-md bg-zinc-100 dark:bg-slate-900 hover:cursor-pointer group relative"
+            class="p-8 rounded-md bg-zinc-100 dark:bg-slate-900 hover:cursor-pointer group relative"
         >
             <div 
                 :class="{ 'expanded-opacity': expanded }"
@@ -166,11 +168,12 @@
     <!-- Third card -->
     <div
         x-data="{ expanded: false }"
+        class="order-4 md:order-6"
     >
         <article 
             @click="expanded =! expanded"
             :class="{ 'shadow-md dark:shadow-xl': expanded }"
-            class="p-10 rounded-md bg-zinc-100 dark:bg-slate-900 hover:cursor-pointer group relative"
+            class="p-8 rounded-md bg-zinc-100 dark:bg-slate-900 hover:cursor-pointer group relative"
         >
             <div 
                 :class="{ 'expanded-opacity': expanded }"
@@ -223,13 +226,22 @@
         </article>
     </div>
 
-    <div class="flex justify-center items-center">
+    <div class="flex justify-center items-center | order-5 md:order-7">
         <a href="{{ navigation.navItems[1].url }}" class="col-start-1 col-span-3 lg:col-start-2 lg:col-span-1 rounded-lg w-fit text-zinc-50 bg-rose-600 dark:bg-gradient-to-r dark:from-rose-400 dark:to-rose-300 py-2 px-4 mb-12 lg:mb-0 dark:text-slate-900 hover:-translate-y-1 transition-transform duration-100">
             <i class="fa-solid fa-ball-pile mr-1"></i>
             See All Posts
         </a>
     </div>
-    <div class="md:col-span-2 mt-20">
+    <div class="col-span-1 md:col-span-1 order-6 md:order-2">
+        <p class="font-header text-lg font-medium italic">
+        <i class="fa-duotone fa-chart-line mr-2 text-rose-600 dark:text-rose-400"></i>
+            Top Posts
+        </p>
+    </div>
+    <div class="order-7 md:order-5 row-span-3">
+        {% include "partials/top-posts-list.njk" %}
+    </div>
+    <div class="md:col-span-2 mt-10 | order-8">
         <section class="relative w-full">
         
             {% include "partials/tags-list-all.njk" %}

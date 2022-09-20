@@ -1,0 +1,29 @@
+{% if page.url != "/" %}
+    <p class="mb-3 font-header text-lg font-medium italic">
+        <i class="fa-duotone fa-chart-line mr-2 text-rose-600 dark:text-rose-400"></i>
+            Top Posts
+    </p>
+{% endif %}
+<ol class="flex flex-col space-y-2 mb-12" id="topPosts">
+    <!-- Count posts -->
+    {% set counter = cycler(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) %}
+    <!-- Loop through the JSON results from the Fathom query -->
+    {% for item in fathomAnalyticsQuery %}
+        <!-- For each element in the query result, compare the url/pathname with the standard Posts collection -->
+        {% for post in collections.posts %}
+            <!-- If the Post collection url matches the query item url, set the rendered title to match the Post title -->
+            {% if post.url == item.pathname %}
+            {% set postTitle = post.data.title %}
+                <li class="text-base flex space-x-3">
+                    <span class="font-bold text-rose-600 dark:text-rose-400">{{ counter.next() }}</span>
+                    <a 
+                        href="{{ item.pathname }}"
+                        class="hover:text-rose-600 dark:hover:text-rose-400 hover:underline"
+                    >
+                        {{ postTitle }}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</ol>
