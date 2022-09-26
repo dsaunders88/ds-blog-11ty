@@ -5,7 +5,7 @@ post_image:
   alt: HTML Workshop Page, 1996
   source: <a href="https://www.webdesignmuseum.org/gallery/html-workshop-page-1996">Web Design Museum</a>
 post_summary: How I came to build this site on the Jamstack.
-post_intro: "As a designer and occasional writer on a long, frequently exasperating but genuinely exciting journey into front-end web development, I have treated this website as a testing ground for many of the new ideas and tools I've encountered since I started coding in earnest at the end of 2021."
+post_intro: "Since I started coding in earnest at the end of 2021, I've used this website as a testing ground for many of the tools I've encountered on an almost weekly basis. It's become a living embodiment of my long, exasperating, but genuinely exciting journey into front-end web development."
 tags:
   - design
   - "web development"
