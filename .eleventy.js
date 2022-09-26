@@ -2,6 +2,10 @@ const { DateTime } = require("luxon");
 const Image = require("@11ty/eleventy-img");
 const htmlMinTransform = require("./src/transforms/html-min-transform.js");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+const markdownItToc = require("markdown-it-toc-done-right");
 
 async function imageShortcode(src, alt, sizes = "100vw") {
 	if (alt === undefined) {
@@ -86,20 +90,45 @@ module.exports = function (eleventyConfig) {
 	// Set Luxon date time formatting
 	eleventyConfig.addFilter("postDate", (dateObj) => {
 		return DateTime.fromJSDate(dateObj)
-			.toUTC().toLocaleString(DateTime.DATE_FULL);
-			//.setZone("America/Los_Angeles")
-			//.toLocaleString(DateTime.DATE_FULL);
+			.toUTC()
+			.toLocaleString(DateTime.DATE_FULL);
+		//.setZone("America/Los_Angeles")
+		//.toLocaleString(DateTime.DATE_FULL);
 	});
 
 	eleventyConfig.addFilter("postDateShort", (dateObj) => {
 		return DateTime.fromJSDate(dateObj)
-			.toUTC().toLocaleString(DateTime.DATE_SHORT);
-			//.setZone("America/Los_Angeles")
-			//.toLocaleString(DateTime.DATE_SHORT);
+			.toUTC()
+			.toLocaleString(DateTime.DATE_SHORT);
+		//.setZone("America/Los_Angeles")
+		//.toLocaleString(DateTime.DATE_SHORT);
 	});
 
-	// RSS plugin
+	// Plugins
 	eleventyConfig.addPlugin(pluginRss);
+	eleventyConfig.addPlugin(syntaxHighlight);
+
+	// Customize Markdown library and settings:
+	let markdownLibrary = markdownIt({
+		html: true,
+		linkify: true,
+		typographer: true,
+	})
+		.use(markdownItAnchor, {
+			permalink: markdownItAnchor.permalink.ariaHidden({
+				placement: "after",
+				class: "direct-link",
+				symbol: "#",
+			}),
+			level: [1, 2, 3, 4],
+			slugify: eleventyConfig.getFilter("slugify"),
+		})
+		.use(markdownItToc, {
+			slugify: eleventyConfig.getFilter("slugify"),
+			containerClass: "article-toc",
+			linkClass: "article-toc-link",
+		});
+	eleventyConfig.setLibrary("md", markdownLibrary);
 
 	// Image shortcode
 	eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);

@@ -1,5 +1,9 @@
 ---
 title: Christianity and the New Spirit of Capitalism
+post_image:
+  url: /assets/capitalist-pyramid.jpg
+  alt: Pyramid of Capitalist System, 1911 cartoon.
+  source: <a href="https://en.wikipedia.org/wiki/Pyramid_of_Capitalist_System#/media/File:Anti-capitalism_color%E2%80%94_Restored.png" target="_blank">Wikimedia</a>
 post_summary: Max Weber famously argued for an “elective affinity” between a Calvinist work ethic and the economic requirements of industrial capitalism. In its insistence on secularized vocation and deferment of worldly pleasure, according to Weber, the Protestant work ethic gave religious sanction to certain kinds of economic activity, namely, the reinvestment of wealth as capital to build society’s productive forces.
 post_intro: Max Weber famously argued for an “elective affinity” between a Calvinist work ethic and the economic requirements of industrial capitalism. In its insistence on secularized vocation and deferment of worldly pleasure, according to Weber, the Protestant work ethic gave religious sanction to certain kinds of economic activity, namely, the reinvestment of wealth as capital to build society’s productive forces.
 category: notes

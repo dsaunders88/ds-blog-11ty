@@ -1,9 +1,14 @@
 {
 	"name": "Daniel Saunders",
-	"metaTitle": "Daniel Saunders Blog",
+	"metaTitle": "Daniel Saunders | Designer, Reader, Writer",
 	"metaDescription": "This site is an occasional record of Daniel Saunders' reading and writing.",
+	"openGraphImage": "/assets/ds-open-graph.jpg",
 	"url": "https://daniel-saunders.com/",
 	"favicon": "/assets/ds-logo.svg",
+	"avatar": "/assets/ds-headshot.jpg",
+	"author": "Daniel Saunders",
+	"keywords": "blog, design, development, reading, theory",
+	"socialHandle": "@dothedan",
 	"socialLinks": {
 		"rss": "https://daniel-saunders.com/rss-feed.xml",
 		"twitter": "https://twitter.com/dothedan",

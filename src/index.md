@@ -1,5 +1,6 @@
 ---
 layout: "layouts/home.njk"
+path: home
 intro:
   eyebrow: "Designer, Reader & Writer"
   title: "Daniel Saunders"

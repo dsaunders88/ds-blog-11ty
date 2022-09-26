@@ -95,6 +95,54 @@
 	@apply bg-rose-600 text-zinc-50 dark:bg-rose-400 dark:text-slate-900;
 }
 
+/* Article utilities */
+:not(pre) > code {
+	@apply text-lg p-0.5 bg-zinc-200 text-zinc-600 dark:bg-slate-700 dark:text-slate-200;
+}
+
+.article h3 {
+	@apply text-2xl mb-4 mt-16;
+}
+
+.article .direct-link {
+	text-decoration: none;
+	opacity: 0.2;
+	transition: opacity 0.2s;
+}
+
+.article h2:hover .direct-link,
+.article h3:hover .direct-link {
+	opacity: 1;
+}
+
+.article .article-toc-wrapper {
+	@apply mb-8 bg-zinc-100 dark:bg-slate-900 p-6;
+}
+
+.article .article-toc-wrapper .toc-header {
+	@apply font-header text-lg font-medium mb-0 italic cursor-pointer hover:underline;
+}
+
+.article .article-toc-wrapper .toc-header svg {
+	@apply mr-2 text-rose-600 dark:text-rose-400;
+}
+
+.article .article-toc ol {
+	@apply list-decimal list-inside mt-2;
+}
+
+.article .article-toc ol li {
+	@apply mt-4 md:mt-2;
+}
+
+.article .article-toc li > ol {
+	@apply italic text-lg list-none pl-5 mt-0;
+}
+
+.article .article-toc ol a {
+	@apply text-zinc-800 dark:text-slate-200 no-underline hover:text-rose-600 hover:underline dark:hover:text-rose-400;
+}
+
 /* Goodreads widget */
 .gr_custom_container_1656358133 {
 	display: grid;
