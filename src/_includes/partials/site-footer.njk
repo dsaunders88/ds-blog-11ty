@@ -77,6 +77,7 @@
                 </li>
                 <li class="mb-4 flex items-center sm:mb-2">
                     <a
+                        rel="me"
                         href="{{ site.socialLinks.github }}"
                         class="peer order-2 hover:text-rose-600 dark:hover:text-rose-400 hover:underline"
                         target="_blank"
@@ -122,23 +123,23 @@
             <ul class="text-sm">
                 <li class="mb-4 lg:mb-2">
                     <span class="font-bold">Headings:</span>
-                    <a href="{{ site.colophon.headingFont.url }}" target="_blank" class="group text-rose-600 dark:text-rose-400">
+                    <a href="{{ site.colophon.headingFont.url }}" target="_blank" class="group">
                         <span class="underline group-hover:no-underline"
                             >{{ site.colophon.headingFont.text }}</span
                         >
                         <i
-                            class="fa-duotone fa-arrow-up-right-from-square relative bottom-[1px] ml-0.5 text-[12px] transition-transform duration-100 group-hover:-translate-y-1"
+                            class="fa-duotone fa-arrow-up-right-from-square relative bottom-[1px] ml-0.5 text-[12px] transition-transform duration-100 group-hover:-translate-y-1 text-rose-600 dark:text-rose-400"
                         ></i>
                     </a>
                 </li>
                 <li class="mb-4 lg:mb-2">
                     <span class="font-bold">Body:</span>
-                    <a href="{{ site.colophon.bodyFont.url }}" target="_blank" class="group text-rose-600 dark:text-rose-400">
+                    <a href="{{ site.colophon.bodyFont.url }}" target="_blank" class="group">
                         <span class="underline group-hover:no-underline"
                             >{{ site.colophon.bodyFont.text }}</span
                         >
                         <i
-                            class="fa-duotone fa-arrow-up-right-from-square relative bottom-[1px] ml-0.5 text-[12px] transition-transform duration-100 group-hover:-translate-y-1"
+                            class="fa-duotone fa-arrow-up-right-from-square relative bottom-[1px] ml-0.5 text-[12px] transition-transform duration-100 group-hover:-translate-y-1 text-rose-600 dark:text-rose-400"
                         ></i>
                     </a>
                 </li>
@@ -148,9 +149,9 @@
                         {% set buildTools = site.colophon.builtWith %}
                         {% for item in buildTools %}
                             <li class="mb-4 lg:mb-1">
-                                <a href="{{ item.url }}" target="_blank" class="group text-rose-600 dark:text-rose-400">
+                                <a href="{{ item.url }}" target="_blank" class="group">
                                     <span class="underline group-hover:no-underline">{{ item.text }}</span>
-                                    <i class="fa-duotone fa-arrow-up-right-from-square relative bottom-[1px] ml-0.5 text-[12px] transition-transform duration-100 group-hover:-translate-y-1"></i>
+                                    <i class="fa-duotone fa-arrow-up-right-from-square relative bottom-[1px] ml-0.5 text-[12px] transition-transform duration-100 group-hover:-translate-y-1 text-rose-600 dark:text-rose-400"></i>
                                 </a>
                             </li>
                         {% endfor %}
