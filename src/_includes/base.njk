@@ -10,6 +10,7 @@
 
     {% if path == "home" %}
         <title>{{ site.metaTitle }}</title>
+        <link rel="feed" href="/posts/" >
     {% else %}
         <title>{{ title }} | {{ site.name }}</title>
     {% endif %}
