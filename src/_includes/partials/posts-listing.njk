@@ -13,7 +13,7 @@
                     <a href="{{ item.url }}" class="hover:text-rose-600 dark:hover:text-rose-400 hover:underline">{{ item.data.title }}</a>
                 </h3>
             </header>
-            <p class="line-clamp max-w-70ch text-base">{{ item.data.post_summary | safe }}</p>
+            <p class="line-clamp max-w-70ch text-base p-summary">{{ item.data.post_summary | safe }}</p>
         </div>
         {% if item.data.post_image %}
             <picture class="thumbnail rounded-full">

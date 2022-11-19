@@ -2,15 +2,17 @@
 
 {% block content %}
 
+{% set pageUrl %}{{ page.url | url | absoluteUrl(site.url) }}{% endset %}
+
 <div class="hero-clipped custom-background absolute inset-0 z-5 h-60 w-full lg:h-[17rem]"></div>
 <div
     class="container mx-auto max-w-screen-lg px-4 pt-52 pb-20 lg:border-l border-zinc-200 dark:lg:border-slate-600 lg:px-8"
 >
-    <article class="article max-w-prose">
+    <article class="article max-w-prose h-entry">
 
         <!-- Post header -->
         <header>
-            <h1 class="font-header font-bold text-4xl sm:text-5xl md:text-6xl leading-[1.15] text-zinc-800 dark:text-slate-200 mb-8 relative z-10">
+            <h1 class="font-header font-bold text-4xl sm:text-5xl md:text-6xl leading-[1.15] text-zinc-800 dark:text-slate-200 mb-8 relative z-10 p-name">
                 {{ title }}
             </h1>
             <div class="relative">
@@ -19,6 +21,8 @@
                     <date>{{ date | postDate }}</date>
                     <span class="ml-1 mr-0.5 italic">in</span>
                     <a href="{{ parentURL }}" class="text-rose-600 dark:text-rose-400 underline hover:no-underline">{{ category | title }}</a>
+                    <span class="sr-only ml-1">by <span class="p-author">Daniel Saunders</span></span>
+                    <div class="sr-only"><a href="{{ pageUrl }}" class="u-url u-syndication">Permalink</a></div>
                 </div>
                 <section class="mb-8 flex justify-start flex-col 2xl:absolute 2xl:-left-44 2xl:top-0 2xl:mb-0">
                     <div class="sr-only 2xl:not-sr-only mb-6 font-header text-lg font-medium italic 2xl:mb-4 text-left">Tags</div>
@@ -67,8 +71,63 @@
             {{ content | safe }}
         </div>
 
+        <div class="h-card text-sm italic">
+            <a rel="author" class="p-name u-url" href="{{ site.url }}">Daniel Saunders</a> is a freelance web designer and developer. Read more about <a href="/now" class="text-rose-600 dark:text-rose-400 underline hover:no-underline">what I'm doing now</a>.
+        </div>
+
+        <!-- Webmentions -->
+        {% set show = false %}
+        {% set showLikes = false %}
+        {% set showReposts = false %}
+        {% for item in webmentions | getWebmentionsForUrl(pageUrl) %}
+            {% if item %}
+                {% set show = true %}
+            {% endif %}
+            {% if item['wm-property'] === 'like-of' %}
+                {% set showLikes = true %}
+            {% endif %}
+            {% if item['wm-property'] === 'repost-of' %}
+                {% set showReposts = true %}
+            {% endif %}
+        {% endfor %}
+
+        {% if show %}
+            <div class='py-4 border-y border-zinc-200 mt-24 dark:border-slate-600'>
+                {% if showLikes %}
+                    <div>
+                        <span class="font-header font-medium text-lg italic block mb-2">
+                            Likes
+                            <i class="fa-duotone fa-circle-heart ml-1 text-rose-600 dark:text-rose-400"></i>
+                        </span>
+                    </div>
+                    <ul class="flex -space-x-4">
+                        {% for item in webmentions | getWebmentionsForUrl(pageUrl) %}
+                            {% if item['wm-property'] === 'like-of' %}
+                                {% include 'partials/webmentions.njk' %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                {% if showReposts %}
+                    <div class='mt-8'>
+                        <span class="font-header font-medium text-lg italic block mb-2">
+                            Reposts
+                            <i class="fa-duotone fa-retweet ml-1 text-rose-600 dark:text-rose-400"></i>
+                        </span>
+                    </div>
+                    <ul class="flex -space-x-4">
+                        {% for item in webmentions | getWebmentionsForUrl(pageUrl) %}
+                            {% if item['wm-property'] === 'repost-of' %}
+                                {% include 'partials/webmentions.njk' %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        {% endif %}
+
         <!-- Previous and next post links -->
-        <footer class="flex flex-col space-y-12 md:flex-row md:justify-between mt-40 md:space-y-0 md:space-x-12">
+        <footer class="flex flex-col space-y-12 md:flex-row md:justify-between mt-24 md:space-y-0 md:space-x-12">
             {% set nextPost = collections.posts | getPreviousCollectionItem(page) %}
             {% set previousPost = collections.posts | getNextCollectionItem(page) %}
 

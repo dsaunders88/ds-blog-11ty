@@ -32,6 +32,7 @@
 		"postcss": "^8.4.14",
 		"postcss-cli": "^9.1.0",
 		"postcss-import": "^14.1.0",
+		"sanitize-html": "^2.7.3",
 		"tailwindcss": "^3.1.4"
 	},
 	"dependencies": {

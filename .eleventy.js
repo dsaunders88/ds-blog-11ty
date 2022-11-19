@@ -6,6 +6,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItToc = require("markdown-it-toc-done-right");
+const sanitizeHTML = require('sanitize-html');
 
 async function imageShortcode(src, alt, sizes = "100vw") {
 	if (alt === undefined) {
@@ -87,6 +88,47 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter("limit", function (arr, limit) {
 		return arr.slice(0, limit);
 	});
+
+	// https://mxb.dev/blog/using-webmentions-on-static-sites/#webmentions
+	eleventyConfig.addFilter("getWebmentionsForUrl", function (webmentions, url) {
+		// const allowedTypes = ['like-of', 'repost-of']
+
+		// const hasRequiredFields = entry => {
+		// 	const { author, published, content } = entry
+		// 	return author.name && published && content
+		// }
+
+		// const sanitize = entry => {
+		// 	const { content } = entry
+		// 	if (content['content-type'] === 'text/html') {
+		// 		content.value = sanitizeHTML(content.value)
+		// 	}
+		// 	return entry
+		// }
+
+		if (webmentions) {
+			const filtered = webmentions.map(entry => {
+				let oldUrl = 'https://daniel-saunders.com/2021/07/20/tricontinental-conference-and-liberationist-christianity/'
+				if (entry['wm-target'].startsWith(oldUrl)) {
+					let updatedTarget = entry['wm-target'].replace(oldUrl, 'https://daniel-saunders.com/posts/essays/the-tricontinental-conference-and-latin-american-liberationist-christianity/');
+					entry['wm-target'] = updatedTarget;
+					entry['like-of'] = updatedTarget;
+					return entry
+				} else {
+					return entry
+				}
+			})
+
+			console.log(filtered)
+
+			return filtered
+			.filter(entry => entry['wm-target'] === url)
+			// .filter(entry => allowedTypes.includes(entry['wm-property']))
+			// .map(sanitize)
+		} else {
+			return
+		}
+	})
 
 	// Set Luxon date time formatting
 	eleventyConfig.addFilter("postDate", (dateObj) => {
