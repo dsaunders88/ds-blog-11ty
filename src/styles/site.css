@@ -143,6 +143,24 @@
 	@apply text-zinc-800 dark:text-slate-200 no-underline hover:text-rose-600 hover:underline dark:hover:text-rose-400;
 }
 
+.article .post-body > img {
+	@apply mb-8
+}
+
+.article .post-body figure:has(img) {
+	@apply mb-8
+}
+
+/*
+.article .post-body figure:has(img) img {
+	border: red 1px solid;
+}
+*/
+
+.article .post-body figure:has(img) figcaption {
+	@apply text-sm italic leading-snug text-zinc-500 dark:text-slate-400 pt-3;
+}
+
 /* Goodreads widget */
 .gr_custom_container_1656358133 {
 	display: grid;

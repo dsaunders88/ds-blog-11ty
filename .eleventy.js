@@ -42,6 +42,24 @@ async function imageShortcode(src, alt, sizes = "100vw") {
 		  decoding="async">`;
 }
 
+async function inlineImageShortcode(src, alt) {
+	if(alt === undefined) {
+		// You bet we throw an error on missing alt (alt="" works okay)
+		throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+	  }
+
+	let metadata = await Image(src, {
+		widths: [600, 900, 1200],
+		formats: ["webp"],
+		urlPath: "/assets/optimized/",
+		outputDir: "./_site/assets/optimized/",
+	});
+
+	let data = metadata.webp[metadata.webp.length - 1];
+
+	return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async">`;
+}
+
 // Eleventy module exports
 module.exports = function (eleventyConfig) {
 	if (process.env.ELEVENTY_PRODUCTION) {
@@ -119,8 +137,6 @@ module.exports = function (eleventyConfig) {
 				}
 			})
 
-			console.log(filtered)
-
 			return filtered
 			.filter(entry => entry['wm-target'] === url)
 			// .filter(entry => allowedTypes.includes(entry['wm-property']))
@@ -177,6 +193,11 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 	eleventyConfig.addLiquidShortcode("image", imageShortcode);
 	eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+	
+	// Inline image shortcode
+	eleventyConfig.addNunjucksAsyncShortcode("inlineImage", inlineImageShortcode);
+	eleventyConfig.addLiquidShortcode("inlineImage", inlineImageShortcode);
+	eleventyConfig.addJavaScriptFunction("inlineImage", inlineImageShortcode);
 
 	return {
 		markdownTemplateEngine: "njk",

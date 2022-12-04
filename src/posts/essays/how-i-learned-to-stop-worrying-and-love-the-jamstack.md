@@ -60,6 +60,9 @@ The other game-changing factor for me was [Markdown](https://www.markdownguide.o
 
 Let's take a look at a few examples. Below is the simplified directory structure for this site. The `src` directory is where all of the building and content authoring happens, while the `_site` directory holds the static files that Eleventy builds for deployment on the web. Within `src`, the `_includes` sub-directory holds the actual page and component templates (`.njk` being the filename extension for [Nunjucks](https://mozilla.github.io/nunjucks/), my JavaScript templating language of choice).
 
+<figure>
+<figcaption class="code-caption">Project Directory</figcaption>
+
 ```editorconfig
 ├── _site/ # The 11ty build directory
 ├── src/
@@ -90,9 +93,14 @@ Let's take a look at a few examples. Below is the simplified directory structure
 ├── etc.
 ```
 
+</figure>
+
 What I love about this is that everything is right in front of me—templates, content, styling, etc. Also, the directory structure largely reflects the route structure of the deployed site. In other words, the file `src/posts/essays/another-essay-title.md` will output to a page that lives at _/posts/essays/another-essay-title/_ on the live site.
 
 The key element in the `.md` files is the _front matter_—in the example below, the stuff in between the fenced `---` elements (here written in [YAML syntax](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started)). The front matter is like a file's metadata that becomes available to Eleventy for templating/creating content collections, and anything else you can think of. The Markdown file below has front matter items that control the page's layout template, title, description, and date. The other thing to note is that the `tags` value tells Eleventy to create a _collection_ of that name—here a collection called posts. [Collections](https://www.11ty.dev/docs/collections/) are a super powerful feature in Eleventy that let you group content together to do lots of exciting things.
+
+<figure>
+<figcaption class="code-caption">src/posts/essays/post.md</figcaption>
 
 ```yaml
 ---
@@ -105,11 +113,15 @@ tags: posts # tells 11ty which collection this belongs to
 Body of the post in [Markdown](https://www.markdownguide.org/).
 ```
 
-Once you have a collection, you can render its data with a templating language—again, I'm using Nunjucks here. On a posts index page template (i.e., a page listing all of our posts using `layouts/posts-index.njk`), I can loop through the entries and access the collection object's front matter within its `data`.
+</figure>
 
-{% highlight "jinja2" %}
-{% raw %}
+Once you have a collection, you can render its data with a templating language—again, I'm using Nunjucks here. On a posts index page template (i.e., a page listing all of our posts), I can loop through the entries and access the collection object's front matter within its `data`.
 
+<figure>
+<figcaption class="code-caption">src/_includes/layouts/posts-index.njk</figcaption>
+
+```jinja2
+{%- raw %}
 <ul class="post-list">
   {% for post in collections.posts %}
     <li class="card">
@@ -122,24 +134,28 @@ Once you have a collection, you can render its data with a templating language�
     </li>
   {% endfor %}
 </ul>
-
 {% endraw %}
-{% endhighlight %}
+```
 
-Then, on another template for the actual post view (using `layouts/post-view.njk`), I can render the front matter and body directly:
+</figure>
 
-{% highlight "jinja2" %}
-{% raw %}
+Then, on another template for the actual post view, I can render the front matter and body directly:
 
+<figure>
+<figcaption class="code-caption">src/_includes/layouts/post-view.njk</figcaption>
+
+```jinja2
+{%- raw %}
 <article>
   <h1>{{ title }}</h1>
   <p>{{ date | readableDate }}</p>
   <!-- Render the Markdown body content as HTML -->
   <section>{{ content | safe }}</section>
 </article>
-
 {% endraw %}
-{% endhighlight %}
+```
+
+</figure>
 
 Again, what I like about this approach is that everything exists in front of me. Even though SSGs have a learning curve, and they're all different, making the jump to Jamstack was a challenge that furthered rather than hindered me in my web development journey.
 

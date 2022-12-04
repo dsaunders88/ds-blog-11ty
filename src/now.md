@@ -7,27 +7,25 @@ permalink: /now/index.html
 
 <img src="{{ site.avatar }}" alt="Daniel Saunders" class="rounded-full shadow-md w-40 h-40 mb-8" />
 
-I’m Daniel Saunders, a designer, reader, and writer with somewhat eclectic interests, as you might have gathered from looking around this site. In real life I’m just as likely to be thinking about philosophical and social questions as I am coding problems, so that is what is reflected here! Get in touch at [my email](mailto:daniel.thomas.saunders@gmail).
+I’m Daniel Saunders, a designer, reader, and writer with somewhat eclectic interests, as you might have gathered from looking around this site. In real life I’m just as likely to be thinking about philosophical and social questions as I am coding problems, so that is what is reflected here! Subscribe to this site's [RSS feed](/rss-feed.xml) or get in touch at [my email](mailto:daniel.thomas.saunders@gmail).
 
 ## Projects
 
-My biggest project at the moment is a deep dive into front end web development (you’re looking at some of the fruits of that now!), which is part of a general move I’ve been making as a freelance worker from visual and print design to web design. I used <a href="https://webflow.com/" target="_blank">Webflow</a> for a long time (and it’s a great tool for certain things), but I reached the point where I wanted more flexibility, control, and understanding of the things I was making. It’s been a long process and has taken me through refreshing HTML and CSS fundamentals, learning JavaScript, and adopting new tools like Visual Studio Code, the command line, npm packages, <a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a>, and <a href="https://www.11ty.dev/" target="_blank">Eleventy</a> (<a href="https://learneleventyfromscratch.com/lesson/31.html#the-end" target="_blank">I learned Eleventy from scratch!</a>) for static site generation (because the future is <a href="https://jamstack.org/" target="_blank">Jamtack</a>). Honestly, it’s made me a better designer, too. I’ve got a lot to learn, but it’s been a blast so far.
+I started coding in earnest at the end of 2021, and since then it's become the primary focus of my longstanding freelance work. You can read a little bit about my journey from being a purely visual designer to being the unicorn "designer who codes" [on this post](/posts/essays/how-i-learned-to-stop-worrying-and-love-the-jamstack/) and hopefully more posts to come. **As a major step in that process, I'm excited to say that at the end of 2022, I am launching a new [web design & development studio](https://www.ds-design.xyz/) focused on building Jamstack websites.**
 
-I’m slowly working on a top secret personal design project that combines typography, web development, reading, and communism. See <a href="https://twitter.com/dothedan/status/1492280983181135874?cxt=HHwWhMCoubrp0rUpAAAA" target="_blank">more about that here</a>, and stay tuned...
+Check out my [design work page](https://www.danielsaunders.xyz/) for some recent website projects that I'm particulary proud of.
 
-In my freelance work I’ve recently designed and deployed some websites that I’m particularly proud of, two of them Episcopal churches: <a href="https://www.stjohnsla.org/" target="_blank">St. John’s Cathedral</a> in Los Angeles and <a href="https://www.trinitynewton.org/" target="_blank">Trinity Parish</a> in the Boston area.
+I also recently helped (very modestly) the great folks at the [Magnificast](https://themagnificast.com/) with some design things on their zine about [Christian solidarity with Cuba](https://t.co/l8CVojNJub). Check it out if you're interested!
 
 ## Reading & Writing
 
-- To commemorate the publication centenary of _Ulysses_, I’m going through the novel for the second time (last time was ~10 years ago) with the help of <a href="https://www.goodreads.com/book/show/30339.Ulysses" target="_blank">Hugh Kenner’s incredible critical guide</a>.
-
-- Revisiting some of the novels and biography of the Greek writer Nikos Kazantzakis for an essay I’m working on.
-
 - Finished Olúfẹ́mi O. Táíwò's excellent new book, <a href="https://global.oup.com/academic/product/reconsidering-reparations-9780197508893?cc=us&lang=en&" target="_blank"><em>Reconsidering Reparations</em></a>, and will have a review of it coming out soon.
 
-- Recently read and enjoyed Alex Ross’ <a href="https://us.macmillan.com/books/9780374285937/wagnerism" target="_blank"><em>Wagnerism: Art and Politics in the Shadow of Music</em></a>, Vine Deloria, Jr.’s <a href="https://www.oupress.com/9780806121291/custer-died-for-your-sins/" target="_blank"><em>Custer Died for Your Sins: An Indian Manifesto</em></a>, Max Ajl’s <a href="https://www.plutobooks.com/9780745341750/a-peoples-green-new-deal/" target="_blank"><em>A People's Green New Deal</em></a>, and William Clare Roberts’ <a href="https://press.princeton.edu/books/paperback/9780691180816/marxs-inferno" target="_blank"><em>Marx's Inferno: The Political Theory of Capital</em></a>.
+- Currently deep into Frederic Jameson's <a href="https://www.versobooks.com/books/243-archaeologies-of-the-future"><em>Archaeologies of the Future: The Desire Called Utopia and Other Science Fictions</em></a>, a fantastic exploration of the concept of Utopia and its literary elaborations in science fiction and fantasy. It's my first Jameson, and its landing right in my sweet spot of philosophy/social theory/literary critcism.
 
-- Otherwise kind of a dry season for reading, but things I’ve always got on the backburner: Marx’s _Grundrisse_, all of the exciting new secondary works on Marx (i.e., Michael Heinrich’s <a href="https://monthlyreview.org/product/how-to-read-marxs-capital/" target="_blank"><em>How to Read Marx’s Capital</em></a>), and Robert Alter’s three-volume translation of the <a href="https://wwnorton.com/books/9780393292497" target="_blank">Hebrew Bible</a>.
+- Some new books I've recently acquired that I've got waiting in the wings: Arundhati Roy's *Azadi: Fascism, Fiction, and Freedom in the Time of the Virus*, China Miéville's *A Spectre, Haunting: On the Communist Manifesto*, and Jonathan Crary's *24/7:  Late Capitalism and the Ends of Sleep*.
+
+- In the last few months I've also finished a few excellent books: László Krasznahorkai's eerie novel *Satantango* ("*Twin Peaks: The Return* meets Tarkovsky"), Sven-Eric Liedman's very approachable *A World to Win: The Life and Works of Karl Marx*, and another Táíwò banger, *Elite Capture: How the Powerful Took Over Identity Politics*. Oh, and *Ulysses* for the second time.😁
 
 <hr class="opacity-25"><br>
 

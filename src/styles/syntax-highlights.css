@@ -3,6 +3,14 @@
 * based on: https://github.com/MoOx/sass-prism-theme-base by Maxime Thirouin ~ MoOx --> http://moox.fr/ , which is Loosely based on Monokai textmate theme by http://www.monokai.nl/
 * license: MIT; http://moox.mit-license.org/
 */
+pre[class*="language-"] {
+	border-radius: 0.5rem;
+}
+
+.code-caption {
+	@apply relative top-2 font-header text-sm font-bold uppercase tracking-widest dark:text-rose-400 text-right
+}
+
 .dark {
 	code[class*="language-"],
 	pre[class*="language-"] {
@@ -33,7 +41,7 @@
 
 	pre[class*="language-"] {
 		padding: 1rem;
-		margin-top: 2rem;
+		margin-top: 1rem;
 		margin-bottom: 2rem;
 		overflow: auto;
 		position: relative;
@@ -209,7 +217,7 @@ code[class*="language-"] ::selection {
 /* Code blocks */
 pre[class*="language-"] {
 	padding: 1rem;
-	margin-top: 2rem;
+	margin-top: 1rem;
 	margin-bottom: 2rem;
 	overflow: auto;
 	@apply bg-zinc-100;
