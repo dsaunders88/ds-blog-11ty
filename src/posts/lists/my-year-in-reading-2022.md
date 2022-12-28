@@ -5,7 +5,7 @@ post_image:
   alt: "Domenico di Michelino's 'La commedia illumina Firenze' on the wall of Florence Cathedral."
   source: <a href="https://en.wikipedia.org/wiki/Domenico_di_Michelino#/media/File:Dante_Domenico_di_Michelino_Duomo_Florence.jpg">Wikimedia</a>
 post_summary: My entirely not-of-the-moment, provisional list of favorite reads from 2022, the books that most shaped my thinking this year.
-post_intro: While my "books to read" list seems to grow ever greater than my "books finished" list, this year I still managed to complete some books that have been sitting on my shelf for a while. I also fell in love again with some old favorites and discovered some gems that had not been on my radar before.
+post_intro: While my “books to read” list seems to grow ever greater than my “books finished” list, this year I still managed to complete some books that have been sitting on my shelf for a while. I also fell in love again with some old favorites and discovered some gems that had not been on my radar before.
 tags:
   - reading
   - "2022"
@@ -113,7 +113,7 @@ This is how Roberts arrives at his view of Marx as a radical republican,  concer
 
 <div class="blockquote"><strong>For fans of:</strong> <em>Tour de force</em> literary theory, Greimas squares (so many of them), utopia/dystopia, Kim Stanley Robinson/Ursula Le Guin, pithy off-hand remarks that cause you to rethink entire movements or individuals</div>
 
-Having gone through the social hell, what then *does* the longed-for social republic on the other side look like, exactly? As everyone knows, it is far easier to critique the world-as-it-is than to imagine the world-as-it-might-be. But the impulse to think the unthinkable, to carve out an "enclave" from the "nightmare of history" (Stephen Dedalus in *Ulysses*), is an act which generates the kind of text which is not quite wholly fiction, not quite wholly social/political theory, but an explosive, protean thing filled with the unique social desires that attend each particular era. Following its grand inaugural iteration by Thomas More, this is the kind of text we call the Utopian.
+Having gone through the social hell, what then *does* the longed-for social republic on the other side look like, exactly? As everyone knows, it is far easier to critique the world-as-it-is than to imagine the world-as-it-might-be. But the impulse to think the unthinkable, to carve out an "enclave" from the "nightmare of history" (Stephen Dedalus in *Ulysses*), is an act which generates the kind of text which is not quite wholly fiction, not quite wholly social/political theory, but an explosive, protean thing filled with the unique social desires that attend each particular era (and here we're back to Wagner). Following its grand inaugural iteration by Thomas More, this is the kind of text we call the Utopian.
 
 (More's Utopia is a text which I have a particular interest in, as it plays a crucial role in [my paper on Christianity, capitalism, and anti-fetishism](/posts/essays/ideology-fetishism-apophaticism-marxist-criticism-and-christianity/). I only wish I could have read this book before writing the paper!)
 
