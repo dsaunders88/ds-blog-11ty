@@ -6,7 +6,7 @@
 
 <div class="hero-clipped custom-background absolute inset-0 z-5 h-60 w-full lg:h-[17rem]"></div>
 <div
-    class="container mx-auto max-w-screen-lg px-4 pt-52 pb-20 lg:border-l border-zinc-200 dark:lg:border-slate-600 lg:px-8"
+    class="relative container mx-auto max-w-screen-lg px-4 pt-52 pb-20 lg:border-l border-zinc-200 dark:lg:border-slate-600 lg:px-8"
 >
     <article class="article max-w-prose h-entry">
 
@@ -71,7 +71,7 @@
             {{ content | safe }}
         </div>
 
-        <div class="h-card text-sm italic">
+        <div class="h-card text-sm italic mt-8">
             <a rel="author" class="p-name u-url" href="{{ site.url }}">Daniel Saunders</a> is a freelance web designer and developer. Read more about <a href="/now" class="text-rose-600 dark:text-rose-400 underline hover:no-underline">what I'm doing now</a>.
         </div>
 
@@ -160,9 +160,13 @@
                     <a href="{{ nextPost.url }}" class="dark:text-slate-200 text-2xl hover:text-rose-600 dark:hover:text-rose-400 hover:underline font-header font-bold">{{ nextPost.data.title }}</a>
                 </div>
             {% endif %}
-
         </footer>
     </article>
+    <div class="relative mt-8 -bottom-4">
+        <a href="#" class="flex items-center gap-2 group">
+            Back to Top <i class="fa-duotone fa-arrow-up-from-line w-6 h-6 group-hover:-translate-y-1 transition-all text-rose-600 dark:text-rose-400"></i>
+        </a>
+    </div>
 </div>
 
 

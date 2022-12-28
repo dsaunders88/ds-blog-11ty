@@ -1,0 +1,5 @@
+{
+	"layout": "layouts/posts-view.njk",
+    "eleventyExcludeFromCollections": "true",
+	"permalink": "false"
+}

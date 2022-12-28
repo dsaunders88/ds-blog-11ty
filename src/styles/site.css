@@ -151,6 +151,58 @@
 	@apply mb-8
 }
 
+.article .featured-book {
+	@apply mt-16
+}
+
+.article .featured-book img {
+	@apply shadow-md max-w-[15rem] -mb-8 transition-all
+}
+
+.article .featured-book a {
+	@apply inline-block
+}
+
+.article .featured-book img:hover {
+	@apply -translate-y-2 shadow-2xl
+}
+
+.article .book-grid {
+	@apply grid grid-cols-2 lg:grid-cols-4 gap-6 mt-6 mb-6
+}
+
+.article .book-grid .book-grid-item {
+	@apply transition-all relative duration-200
+}
+
+.article .book-grid img {
+	@apply relative h-full object-cover shadow-md transition-all duration-100
+}
+
+.article .book-grid .book-overlay {
+	@apply absolute bottom-0 w-full h-0 z-10 overflow-hidden bg-rose-600/80 dark:bg-rose-400/80 leading-[1.2] text-base flex items-center justify-center text-center transition-all duration-200
+}
+
+.article .book-grid .book-overlay p {
+	@apply mb-0 p-4 opacity-0 transition-opacity duration-200 text-white
+}
+
+.article .book-grid .book-grid-item:hover {
+	@apply -translate-y-2
+}
+
+.article .book-grid .book-grid-item:hover img {
+	@apply shadow-xl 
+}
+
+.article .book-grid .book-grid-item:hover .book-overlay {
+	@apply h-full
+}
+
+.article .book-grid .book-grid-item:hover p {
+	@apply delay-150 opacity-100
+}
+
 /*
 .article .post-body figure:has(img) img {
 	border: red 1px solid;
@@ -159,6 +211,10 @@
 
 .article .post-body figure:has(img) figcaption {
 	@apply text-sm italic leading-snug text-zinc-500 dark:text-slate-400 pt-3;
+}
+
+.article .book-info {
+	@apply text-zinc-500 dark:text-slate-400;
 }
 
 /* Goodreads widget */
