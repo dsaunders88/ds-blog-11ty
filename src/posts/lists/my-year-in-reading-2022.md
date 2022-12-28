@@ -35,7 +35,7 @@ My favorite reads of the year, ones that prompted prolonged or critical reflecti
 </a>
 </figure>
 
-### *Wagnerism: Art and Politics in the Shadow of Music*
+### Wagnerism: Art and Politics in the Shadow of Music
 
 <span class="book-info">by Alex Ross • 2020, Farrar, Straus and Giroux</span>
 
@@ -57,7 +57,7 @@ As [Nathan Shields writes](https://thebaffler.com/salvos/wagnermania-shields) in
 </a>
 </figure>
 
-### *Ulysses* and *Ulysses*
+### Ulysses *and* Ulysses
 
 <span class="book-info">*Ulysses* by James Joyce • 2013, Vintage Classics; *Ulysses* by Hugh Kenner • 1987, Johns Hopkins University Press</span>
 
@@ -67,7 +67,7 @@ Wagner was a luminary for the Modernist movement, whose greatest representatives
 
 The first time I read the novel, I did it line by line with the Gifford annotated guide, wanting to catch every single reference like those above. It's an exhausting way to read with few true payoffs, apart from being able to say that you got every reference (you definitely didn't). This time around, however, I read it only with Hugh Kenner's short, excellent work as a companion, which allowed me to read *Ulysses* above all *as a novel*.
 
-Kenner, one of the great critics of English literature, is less interested in the myriad references and Homeric analogies of character than he is in analogies of *situation*. Bloom is not so much Odysseus incarnate (although he might be, [via metempsychosis](https://www.bloomsandbarnacles.com/blog/2020/04/13/met-him-pike-hoses)) as he is a wandering and scorned man in search of home. Stephen is not so much Bloom's metaphorical son as he is an immature and lost literary aspirant wrestling with all kinds of difficult fatherly inheritance—emotional, spiritual, and intellectual. This reading transforms the novel's episodes from formulaic, one-to-one allegories (as in Stuart Gilbert's somewhat tedious original guide) to a complex narrative web with layers of meaning. Turns out, Joyce wasn't just a smarty-pants, but could actually write a good story, too!
+Kenner, one of the great critics of English literature, is less interested in the myriad references and Homeric analogies of character than he is in analogies of *situation*. Bloom is not so much Odysseus incarnate (although he might be, [via metempsychosis](https://www.bloomsandbarnacles.com/blog/2020/04/13/met-him-pike-hoses)) as he is a wandering and scorned man in search of home. Stephen is not so much Bloom's metaphorical son as he is an immature and lost literary aspirant wrestling with all kinds of difficult fatherly inheritance—emotional, spiritual, and intellectual. This reading transforms the novel's episodes from formulaic, one-to-one allegories (as in Stuart Gilbert's [somewhat tedious original guide](https://en.wikipedia.org/wiki/Gilbert_schema_for_Ulysses)) to a complex narrative web with layers of meaning. Turns out, Joyce wasn't just a smarty-pants, but could actually write a good story, too!
 
 Kenner's book is alive with responsiveness to Joyce's created world, which comes out not only in the big picture themes but also in all of the novel's delicious details—for example, the slow revelation of Stephen's truly bizarre outfit, complete with [Latin-quarter hat that gets him mistaken for a priest](https://www.joyceproject.com/notes/010097latinquarterhat.htm) and his sword-like ashplant (in another Wagner reference, he brandishes it like Siegried in the hilarious brothel scene, crying "*Nothung!*" before smashing a chandelier).
 
@@ -83,7 +83,7 @@ The effect of the Arranger on the reader is to cause us to become aware of both 
 </a>
 </figure>
 
-### *Marx's Inferno: The Political Theory of Capital*
+### Marx's Inferno: The Political Theory of Capital
 
 <span class="book-info">by William Clare Roberts • 2016, Princeton University Press</span>
 
@@ -107,7 +107,7 @@ This is how Roberts arrives at his view of Marx as a radical republican,  concer
 </a>
 </figure>
 
-### *Archaeologies of the Future: The Desire Called Utopia and Other Science Fictions*
+### Archaeologies of the Future: The Desire Called Utopia and Other Science Fictions
 
 <span class="book-info">by Frederic Jameson • 2007, Verso</span>
 
