@@ -16,13 +16,19 @@
                 {{ title }}
             </h1>
             <div class="relative">
-                <div class="mb-8 text-zinc-500 dark:text-slate-400 xl:mb-12">
-
-                    <date class="dt-published">{{ date | postDate }}</date>
-                    <span class="ml-1 mr-0.5 italic">in</span>
-                    <a href="{{ parentURL }}" class="text-rose-600 dark:text-rose-400 underline hover:no-underline">{{ category | title }}</a>
-                    <span class="sr-only ml-1">by <span class="p-author">Daniel Saunders</span></span>
-                    <div class="sr-only"><a href="{{ pageUrl }}" class="u-url u-syndication">Permalink</a></div>
+                <div class="mb-8 flex items-center gap-6 text-zinc-500 dark:text-slate-400 xl:mb-12">
+                    <div>
+                        <date class="dt-published">{{ date | postDate }}</date>
+                        <span class="ml-1 mr-0.5 italic">in</span>
+                        <a href="{{ parentURL }}" class="text-rose-600 dark:text-rose-400 underline hover:no-underline">{{ category | title }}</a>
+                    </div>
+                    <div>
+                        <span><i class="fa-duotone fa-clock mr-2 text-rose-600 dark:text-rose-400"></i>{{ helpers.getReadingTime(content) }}</span>
+                    </div>
+                        <span class="sr-only ml-1">by <span class="p-author">Daniel Saunders</span></span>
+                        <div class="sr-only"><a href="{{ pageUrl }}" class="u-url u-syndication">Permalink</a></div>
+                    <div>
+                    </div>
                 </div>
                 <section class="mb-8 flex justify-start flex-col 2xl:absolute 2xl:-left-44 2xl:top-0 2xl:mb-0">
                     <div class="sr-only 2xl:not-sr-only mb-6 font-header text-lg font-medium italic 2xl:mb-4 text-left">Tags</div>
