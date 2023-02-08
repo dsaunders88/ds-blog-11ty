@@ -1,5 +1,5 @@
 ---
-title: Writing
+title: Published Writing
 layout: layouts/inner-page.njk
 page_summary: I occasionally write pieces at various outlets, and I am working on a few longer, more academic articles on the side. (You can get a pretty good idea of my interests by browsing <a href="/posts/">my blog posts</a>.) Here is a selected list.
 permalink: /writing/index.html

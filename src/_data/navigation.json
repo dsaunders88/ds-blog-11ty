@@ -1,32 +1,36 @@
 {
-	"navItems": [
-		{
-			"text": "Home",
-			"url": "/"
-		},
-		{
-			"text": "All Posts",
-			"url": "/posts/"
-		},
-		{
-			"text": "Notes",
-			"url": "/posts/notes/"
-		},
-		{
-			"text": "Essays",
-			"url": "/posts/essays/"
-		},
-		{
-			"text": "Lists",
-			"url": "/posts/lists/"
-		},
-		{
-			"text": "Published Writing",
-			"url": "/writing/"
-		},
-		{
-			"text": "Now",
-			"url": "/now/"
-		}
-	]
+  "navItems": [
+    {
+      "text": "Home",
+      "url": "/"
+    },
+    {
+      "text": "All Posts",
+      "url": "/posts/"
+    },
+    {
+      "text": "Notes",
+      "url": "/posts/notes/"
+    },
+    {
+      "text": "Essays",
+      "url": "/posts/essays/"
+    },
+    {
+      "text": "Lists",
+      "url": "/posts/lists/"
+    },
+    {
+      "text": "Published Writing",
+      "url": "/writing/"
+    },
+    {
+      "text": "Links",
+      "url": "/links/"
+    },
+    {
+      "text": "Now",
+      "url": "/now/"
+    }
+  ]
 }
