@@ -11,6 +11,7 @@ tags:
   - "web development"
   - "2022"
 date: 2022-12-03
+stylesheet: code
 ---
 
 <div class="article-toc-wrapper" x-data="{ show: false }">
@@ -39,7 +40,7 @@ Markdown, while great for structuring content for blogs like this one, is in my 
 
 I had the pleasure of attending the [Jamstack Conference](https://jamstack.org/conf/) in October (it was fantastic!), and something I overheard there rang true in my experience—that as the industry moves away from WordPress (which still [powers a huge portion of the web](https://almanac.httparchive.org/en/2022/cms#wordpress-in-2022), by the way), the use-case that WordPress was perfectly tailored to (namely, the personal/portfolio site of the type I'm talking about here) has been overlooked by most of the big-name, cutting-edge technologies.
 
-For example, there is an amazing crop of [headless CMS](https://www.sanity.io/headless-cms) options out there at the moment, although most are geared toward enterprise users. I've had a lot of fun learning and playing around with [Sanity](https://www.sanity.io/) and [Storyblok](https://www.storyblok.com/) in particular, but for the small personal portfolio site that WordPress excelled at, both feel a bit like bringing a Lamborghini to a go-kart track. The headless CMS space and its products are still evolving, so one day soon this might not seem like such a big deal. But WordPress was (is) unbelievably popular because, apart from any development considerations, it addressed this need for a simple, "plug-and-play" *content solution* with minimal customization and ease of editing for the non-technical user.
+For example, there is an amazing crop of [headless CMS](https://www.sanity.io/headless-cms) options out there at the moment, although most are geared toward enterprise users. I've had a lot of fun learning and playing around with [Sanity](https://www.sanity.io/) and [Storyblok](https://www.storyblok.com/) in particular, but for the small personal portfolio site that WordPress excelled at, both feel a bit like bringing a Lamborghini to a go-kart track. The headless CMS space and its products are still evolving, so one day soon this might not seem like such a big deal. But WordPress was (is) unbelievably popular because, apart from any development considerations, it addressed this need for a simple, "plug-and-play" _content solution_ with minimal customization and ease of editing for the non-technical user.
 
 It was as a result of these problems and thoughts that I decided to try using [Airtable](https://www.airtable.com/product) as a content management system for this particular portfolio project—not an original idea by any means, but one that I had wanted to try my own way given the considerations above. Airtable, if you're unfamiliar, is a kind of collaborative spreadsheet-database hybrid; it gives you all of the functionality of shared Excel sheets with the power of linked records and organizational methods you'd expect in a database. It's a beautiful and intuitive product that I use regularly for my own work and personal needs. It also provides a straightforward, <abbr title="Representational State Transfer">REST</abbr>-like [web API](https://airtable.com/developers/web/api/introduction) that allows the data you create to be used anywhere on the web.
 
@@ -47,7 +48,7 @@ So here's how I set up an "Airtable back-end" for this personal portfolio site�
 
 ## Airtable: Scaffolding the Data
 
-Getting set up in Airtable is quick and easy. First, I created a "base," which  is the central hub for a project that can contain multiple tables and users related to that project (helpful because you can work in real-time on structuring and adding content with your client). From there, I added separate tables corresponding to each page or content collection type. For example, the "Pages" table has some recurring fields for each of the website's pages, like a title, subtitle, featured image, SEO description, etc., while the "Credits" table is structured to show a content collection with information like year, role, image, and <abbr title="Internet Movie Database">IMDb</abbr> link for movie and TV credits.
+Getting set up in Airtable is quick and easy. First, I created a "base," which is the central hub for a project that can contain multiple tables and users related to that project (helpful because you can work in real-time on structuring and adding content with your client). From there, I added separate tables corresponding to each page or content collection type. For example, the "Pages" table has some recurring fields for each of the website's pages, like a title, subtitle, featured image, SEO description, etc., while the "Credits" table is structured to show a content collection with information like year, role, image, and <abbr title="Internet Movie Database">IMDb</abbr> link for movie and TV credits.
 
 <figure>
 {% inlineImage "./src/assets/a-blake-table.png", "Screenshot of Airtable table on gradient background, showing various records under the title 'Credits'.", "100vw" %}
@@ -66,41 +67,39 @@ Here's an example of an asynchronous function that grabs an array of records fro
 <figcaption class="code-caption">src/utils/airtable.js</figcaption>
 
 ```js
-import { default as EleventyFetch } from '@11ty/eleventy-fetch'
+import { default as EleventyFetch } from "@11ty/eleventy-fetch";
 
-// Setting the Airtable secret API key and the Airtable base id 
+// Setting the Airtable secret API key and the Airtable base id
 // from environment variables
 const airtableToken = import.meta.env.AIRTABLE_API_KEY;
 const airtableBaseId = import.meta.env.AIRTABLE_BASE_ID;
 
 export async function getRecords(table, sortField, sortDirection) {
+  // Constructing a query URL (using the Airtable API URL encoder
+  // here: https://codepen.io/airtable/pen/MeXqOg) and
+  // adding in our filter and sort parameters
+  let url = `https://api.airtable.com/v0/${airtableBaseId}/${table}?sort%5B0%5D%5Bfield%5D=${sortField}&sort%5B0%5D%5Bdirection%5D=${sortDirection}`;
 
-    // Constructing a query URL (using the Airtable API URL encoder 
-    // here: https://codepen.io/airtable/pen/MeXqOg) and 
-    // adding in our filter and sort parameters
-    let url = `https://api.airtable.com/v0/${airtableBaseId}/${table}?sort%5B0%5D%5Bfield%5D=${sortField}&sort%5B0%5D%5Bdirection%5D=${sortDirection}`;
-
-    // The beauty of Eleventy Fetch -- pass in our URL and 
-    // set a few options for caching and authorization
-    const response = await EleventyFetch(url, {
-
-    // Cache the responses for 1 hour; useful so you don't 
+  // The beauty of Eleventy Fetch -- pass in our URL and
+  // set a few options for caching and authorization
+  const response = await EleventyFetch(url, {
+    // Cache the responses for 1 hour; useful so you don't
     // constantly ping and exceed the limits on Airtable's API
-    duration: '1h',
+    duration: "1h",
 
     // Set the data response type
-    type: 'json',
+    type: "json",
 
     // Append the Airtable API authorization key to the query
     fetchOptions: {
-        headers: {
-            authorization: `Bearer ${airtableToken}`
-            },
-        },
-    });
+      headers: {
+        authorization: `Bearer ${airtableToken}`,
+      },
+    },
+  });
 
-    let { records } = await response;
-    return records
+  let { records } = await response;
+  return records;
 }
 ```
 
@@ -153,7 +152,7 @@ import Credit from "../components/Card.astro";
 
 let tableId = 'Credits'; // Can be the name or unique ID of the Airtable table
 
-// Arrange the records by the 'Year' field in descending order 
+// Arrange the records by the 'Year' field in descending order
 // and save to a variable
 const credits = await getRecords(tableId, 'Year', 'desc');
 ---
@@ -161,23 +160,23 @@ const credits = await getRecords(tableId, 'Year', 'desc');
 <h2>Credits</h2>
 <div class="slider">
     {credits.map(item =>
-        <Credit 
+        <Credit
             title={item.fields.Name}
             year={item.fields.Year}
             role={item.fields.Role}
             detail={item.fields.Detail}
             link={item.fields.Link}
-            // Airtable's image field is an array, so to get the 
+            // Airtable's image field is an array, so to get the
             // image source we can access the first index of the array
             imageSrc={item.fields.Image[0].url}
             imageAlt={item.fields.ImageAlt}
             categoryName={item.fields.Category}
-            // Using Astro's class:list directive on the Credit component 
-            // to conditionally apply different styles here based on 
+            // Using Astro's class:list directive on the Credit component
+            // to conditionally apply different styles here based on
             // the category value
             categoryStyle={
-                item.fields.Category == 'TV Series' && [ 'category tv-series' ] 
-                || item.fields.Category == 'TV Special' && [ 'category tv-special' ] 
+                item.fields.Category == 'TV Series' && [ 'category tv-series' ]
+                || item.fields.Category == 'TV Special' && [ 'category tv-special' ]
                 || item.fields.Category == 'Film' && [ 'category film' ]
             }
         />
@@ -255,16 +254,17 @@ let webhookUrl = `https://api.netlify.com/build_hooks/${UNIQUE_NETLIFY_ID}?trigg
 
 // Options that set the fetch parameters for the webhook
 let requestOptions = {
-  method: 'POST',
-  redirect: 'follow'
+  method: "POST",
+  redirect: "follow",
 };
 
 // Construct the function that will send the webhook when the
 // publish button is clicked
-let publishToNetlify = () => fetch(webhookUrl, requestOptions)
-  .then(response => response.text())
-  .then(result => console.log('Published!', result))
-  .catch(error => console.log('Failed to publish', error));
+let publishToNetlify = () =>
+  fetch(webhookUrl, requestOptions)
+    .then((response) => response.text())
+    .then((result) => console.log("Published!", result))
+    .catch((error) => console.log("Failed to publish", error));
 
 // Call the function: site rebuilt on Netlify with one click!
 publishToNetlify();
@@ -277,15 +277,15 @@ let publishTime = new Date().toLocaleString();
 
 // Select the record field to update
 let table = base.getTable("Publish");
-let query = await table.selectRecordsAsync({fields: []});
+let query = await table.selectRecordsAsync({ fields: [] });
 let recordId = query.records[0].id;
 
-// Print text to the selected field: in this case, the 
+// Print text to the selected field: in this case, the
 // last published date and time
 output.text(`Last published ${publishTime}`);
 await table.updateRecordAsync(recordId, {
   "Last Published": `Last published ${publishTime}`,
-})
+});
 ```
 
 So that's how I built out an Airtable CMS in less than an hour. I'm eager to keep exploring new ways to build Jamstack sites with Airtable and other tools. If you've done anything similar or have ideas on how this could be improved, feel free to let me know!

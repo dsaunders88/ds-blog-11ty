@@ -7,7 +7,7 @@
         <li>
             <a
                 href="/tag/{{ tag | slugify }}/"
-                class="inline-block py-1 px-2 text-sm bg-zinc-200 hover:bg-zinc-300 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-rose-400 dark:hover:text-slate-900"
+                class="inline-block py-1 px-2 text-sm rounded-[0.25rem] bg-zinc-200 hover:bg-zinc-300 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-rose-400 dark:hover:text-slate-900"
                 {{ helpers.getLinkActiveState("/tag/" + tag | slugify + "/", page.url) | safe }}
             >
                 {{ tag | title }}

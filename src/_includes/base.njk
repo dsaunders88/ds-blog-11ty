@@ -17,13 +17,20 @@
 
     {% include "partials/seo-head.njk" %}
 
-    <link rel="stylesheet" href="https://use.typekit.net/tvl6jzp.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap" rel="stylesheet">
+    {% include "partials/fonts.njk" %}
+
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/tvl6jzp.css"> -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap" rel="stylesheet"> -->
 
     <link rel="stylesheet" href="/site.css">
-    <link rel="stylesheet" href="/syntax-highlights.css">
+
+    {% if stylesheet === 'code' %}
+        <link rel="stylesheet" href="/code.css">
+    {% endif %}
+
+    <!-- <link rel="stylesheet" href="/syntax-highlights.css"> -->
     <link rel="icon" href="{{ site.favicon }}" type="image/svg"/>
 
     <link rel="canonical" href="{{ page.url | absoluteUrl(site.url) }}">

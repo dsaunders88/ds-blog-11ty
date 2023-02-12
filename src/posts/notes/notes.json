@@ -1,6 +1,7 @@
 {
-	"layout": "layouts/posts-view.njk",
-	"permalink": "/posts/notes/{{ title | slugify }}/index.html",
-	"category": "notes",
-	"parentURL": "/posts/notes/"
+  "layout": "layouts/posts-view.njk",
+  "permalink": "/posts/notes/{{ title | slugify }}/index.html",
+  "category": "notes",
+  "parentURL": "/posts/notes/",
+  "path": "article"
 }

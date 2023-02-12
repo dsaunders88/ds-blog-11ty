@@ -1,6 +1,7 @@
 {
-	"layout": "layouts/posts-view.njk",
-	"permalink": "/posts/essays/{{ title | slugify }}/index.html",
-	"category": "essays",
-	"parentURL": "/posts/essays/"
+  "layout": "layouts/posts-view.njk",
+  "permalink": "/posts/essays/{{ title | slugify }}/index.html",
+  "category": "essays",
+  "parentURL": "/posts/essays/",
+  "path": "article"
 }

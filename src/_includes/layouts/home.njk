@@ -13,10 +13,10 @@
                     {{ intro.eyebrow }}
                 </span>
                 <h1
-                    class="mb-8 font-header text-6xl font-bold h-card"
+                    class="mb-8 font-mono tracking-tight text-6xl h-card"
                 >
                     <span
-                        class="bg-gradient-to-r from-rose-600 to-rose-900 dark:from-rose-500 dark:to-rose-300 bg-clip-text text-transparent"
+                        class="dark:bg-gradient-to-r dark:from-rose-500 dark:to-rose-300 dark:bg-clip-text dark:text-transparent"
                     >
                         {{ intro.title }}
                     </span>
@@ -88,7 +88,7 @@
                 <ul class="border-t border-rose-200 dark:border-slate-700 mt-6">
                     {% for item in collections.notes | reverse | limit(5) %}
                         <li class="first:mt-6 mb-6">
-                            <p class="text-base col-span-5 sm:col-span-1 text-zinc-500 dark:text-slate-400">
+                            <p class="text-[0.9rem] font-mono col-span-5 sm:col-span-1 text-zinc-500 dark:text-slate-400">
                                 <date>{{ item.data.date | postDateShort }}</date>
                             </p>
                             <a href="{{ item.url }}" class="w-fit col-span-5 sm:col-span-4 hover:text-rose-600 dark:hover:text-rose-400 hover:underline">
@@ -149,7 +149,7 @@
                 <ul class="border-t border-rose-200 dark:border-slate-700 mt-6">
                     {% for item in collections.essays | reverse | limit(5) %}
                         <li class="first:mt-6 mb-6">
-                            <p class="text-base col-span-5 sm:col-span-1 text-zinc-500 dark:text-slate-400">
+                            <p class="text-[0.9rem] font-mono col-span-5 sm:col-span-1 text-zinc-500 dark:text-slate-400">
                                 <date>{{ item.data.date | postDateShort }}</date>
                             </p>
                             <a href="{{ item.url }}" class="w-fit col-span-5 sm:col-span-4 hover:text-rose-600 dark:hover:text-rose-400 hover:underline">
@@ -210,7 +210,7 @@
                 <ul class="border-t border-rose-200 dark:border-slate-700 mt-6">
                     {% for item in collections.lists | reverse | limit(5) %}
                         <li class="first:mt-6 mb-6">
-                            <p class="text-base col-span-5 sm:col-span-1 text-zinc-500 dark:text-slate-400">
+                            <p class="text-[0.9rem] font-mono col-span-5 sm:col-span-1 text-zinc-500 dark:text-slate-400">
                                 <date>{{ item.data.date | postDateShort }}</date>
                             </p>
                             <a href="{{ item.url }}" class="w-fit col-span-5 sm:col-span-4 hover:text-rose-600 dark:hover:text-rose-400 hover:underline">

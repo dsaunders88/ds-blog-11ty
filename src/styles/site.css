@@ -14,193 +14,197 @@
 	}
 }*/
 
+:root {
+  font-size: 17px;
+}
+
 @layer components {
-	.blockquote {
-		@apply dark:bg-slate-900 p-6 lg:py-8 lg:pl-8 lg:pr-6 mb-8 border-l-2 border-rose-600 dark:border-rose-400 relative lg:-left-[34px] italic bg-[url('/assets/low-poly-grid-haikei-red.svg')] dark:bg-[url('/assets/low-poly-grid-haikei-black.svg')] bg-cover;
-	}
+  .blockquote {
+    @apply dark:bg-slate-900 p-6 lg:py-8 lg:pl-8 lg:pr-6 mb-8 border-l-2 border-rose-600 dark:border-rose-400 relative lg:-left-[34px] italic bg-[url('/assets/low-poly-grid-haikei-red.svg')] dark:bg-[url('/assets/low-poly-grid-haikei-black.svg')] bg-cover;
+  }
 
-	.thumbnail {
-		@apply order-first col-span-3 h-40 w-40 shadow-lg lg:col-span-1 lg:float-right lg:justify-self-end;
-	}
+  .thumbnail {
+    @apply order-first col-span-3 h-40 w-40 shadow-lg lg:col-span-1 lg:float-right lg:justify-self-end;
+  }
 
-	.thumbnail img {
-		@apply object-cover w-full h-full rounded-full dark:brightness-90;
-	}
+  .thumbnail img {
+    @apply object-cover w-full h-full rounded-full dark:brightness-90;
+  }
 
-	.feature_image {
-		@apply w-full mb-4;
-	}
+  .feature_image {
+    @apply w-full mb-4;
+  }
 
-	.feature_image img {
-		@apply w-full dark:brightness-90;
-	}
+  .feature_image img {
+    @apply w-full dark:brightness-90;
+  }
 
-	.image_credit a {
-		@apply text-rose-600 dark:text-rose-400 underline;
-	}
+  .image_credit a {
+    @apply text-rose-600 dark:text-rose-400 underline;
+  }
 
-	.image_credit a:hover {
-		@apply no-underline;
-	}
+  .image_credit a:hover {
+    @apply no-underline;
+  }
 }
 
 * {
-	@apply focus-visible:outline-none focus-visible:ring focus-visible:ring-rose-200;
+  @apply focus-visible:outline-none focus-visible:ring focus-visible:ring-rose-200;
 }
 
 /* Alpine.js - prevent view before loaded */
 [x-cloak] {
-	display: none !important;
+  display: none !important;
 }
 
 /* https://heropatterns.com/ */
 .dark .custom-background {
-	background-color: #0f172a;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 80 80'%3E%3Cg fill='%231e293b' fill-opacity='0.5'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: #0f172a;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 80 80'%3E%3Cg fill='%231e293b' fill-opacity='0.5'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .custom-background {
-	background-color: #fafafa;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 80 80'%3E%3Cg fill='%23f43f5e' fill-opacity='0.07'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: #fafafa;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 80 80'%3E%3Cg fill='%23f43f5e' fill-opacity='0.07'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .hero-clipped {
-	clip-path: polygon(100% 85%, 100% 0%, 0% 0%, 0% 100%);
+  clip-path: polygon(100% 85%, 100% 0%, 0% 0%, 0% 100%);
 }
 
 @media only screen and (max-width: 640px) {
-	.hero-clipped {
-		clip-path: polygon(100% 92%, 100% 0%, 0% 0%, 0% 100%);
-	}
+  .hero-clipped {
+    clip-path: polygon(100% 92%, 100% 0%, 0% 0%, 0% 100%);
+  }
 }
 
 .line-clamp {
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .expanded-opacity {
-	opacity: 0.8 !important;
+  opacity: 0.8 !important;
 }
 
 [data-state="active"],
 [aria-current="page"] {
-	@apply text-rose-600 dark:text-rose-400;
+  @apply text-rose-600 dark:text-rose-400;
 }
 
 #taglist [data-state="active"],
 #taglist [aria-current="page"] {
-	@apply bg-rose-600 text-zinc-50 dark:bg-rose-400 dark:text-slate-900;
+  @apply bg-rose-600 text-zinc-50 dark:bg-rose-400 dark:text-slate-900;
 }
 
 /* Article utilities */
 :not(pre) > code {
-	@apply text-lg p-0.5 bg-zinc-200 text-zinc-600 dark:bg-slate-700 dark:text-slate-200;
+  @apply text-[0.9rem] p-0.5 rounded-[0.25rem] bg-zinc-200 text-zinc-600 dark:bg-slate-700 dark:text-slate-200;
 }
 
 .article h3 {
-	@apply text-2xl mb-4 mt-16;
+  @apply text-2xl mb-4 mt-16;
 }
 
 .article .direct-link {
-	text-decoration: none;
-	opacity: 0.2;
-	transition: opacity 0.2s;
+  text-decoration: none;
+  opacity: 0.2;
+  transition: opacity 0.2s;
 }
 
 .article h2:hover .direct-link,
 .article h3:hover .direct-link {
-	opacity: 1;
+  opacity: 1;
 }
 
 .article .article-toc-wrapper {
-	@apply mb-8 bg-zinc-100 dark:bg-slate-900 p-6;
+  @apply mb-8 bg-zinc-100 dark:bg-slate-900 p-6;
 }
 
 .article .article-toc-wrapper .toc-header {
-	@apply font-header text-lg font-medium mb-0 italic cursor-pointer hover:underline;
+  @apply font-header text-lg font-medium mb-0 italic cursor-pointer hover:underline;
 }
 
 .article .article-toc-wrapper .toc-header svg {
-	@apply mr-2 text-rose-600 dark:text-rose-400;
+  @apply mr-2 text-rose-600 dark:text-rose-400;
 }
 
 .article .article-toc ol {
-	@apply list-decimal list-inside mt-2;
+  @apply list-decimal list-inside mt-2;
 }
 
 .article .article-toc ol li {
-	@apply mt-4 md:mt-2;
+  @apply mt-4 md:mt-2;
 }
 
 .article .article-toc li > ol {
-	@apply italic text-lg list-none pl-5 mt-0;
+  @apply italic text-lg list-none pl-5 mt-0;
 }
 
 .article .article-toc ol a {
-	@apply text-zinc-800 dark:text-slate-200 no-underline hover:text-rose-600 hover:underline dark:hover:text-rose-400;
+  @apply text-zinc-800 dark:text-slate-200 no-underline hover:text-rose-600 hover:underline dark:hover:text-rose-400;
 }
 
 .article .post-body > img {
-	@apply mb-8
+  @apply mb-8;
 }
 
 .article .post-body figure:has(img) {
-	@apply mb-8
+  @apply mb-8;
 }
 
 .article .featured-book {
-	@apply mt-16
+  @apply mt-16;
 }
 
 .article .featured-book img {
-	@apply shadow-md max-w-[15rem] -mb-8 transition-all
+  @apply shadow-md max-w-[15rem] -mb-8 transition-all;
 }
 
 .article .featured-book a {
-	@apply inline-block
+  @apply inline-block;
 }
 
 .article .featured-book img:hover {
-	@apply -translate-y-2 shadow-2xl
+  @apply -translate-y-2 shadow-2xl;
 }
 
 .article .book-grid {
-	@apply grid grid-cols-2 lg:grid-cols-4 gap-6 mt-6 mb-6
+  @apply grid grid-cols-2 lg:grid-cols-4 gap-6 mt-6 mb-6;
 }
 
 .article .book-grid .book-grid-item {
-	@apply transition-all relative duration-200
+  @apply transition-all relative duration-200;
 }
 
 .article .book-grid img {
-	@apply relative h-full object-cover shadow-md transition-all duration-100
+  @apply relative h-full object-cover shadow-md transition-all duration-100;
 }
 
 .article .book-grid .book-overlay {
-	@apply absolute bottom-0 w-full h-0 z-10 overflow-hidden bg-rose-600/80 dark:bg-rose-400/80 leading-[1.2] text-base flex items-center justify-center text-center transition-all duration-200
+  @apply absolute bottom-0 w-full h-0 z-10 overflow-hidden bg-rose-600/80 dark:bg-rose-400/80 leading-[1.2] text-base flex items-center justify-center text-center transition-all duration-200;
 }
 
 .article .book-grid .book-overlay p {
-	@apply mb-0 p-4 opacity-0 transition-opacity duration-200 text-white
+  @apply mb-0 p-4 opacity-0 transition-opacity duration-200 text-white;
 }
 
 .article .book-grid .book-grid-item:hover {
-	@apply -translate-y-2
+  @apply -translate-y-2;
 }
 
 .article .book-grid .book-grid-item:hover img {
-	@apply shadow-xl 
+  @apply shadow-xl;
 }
 
 .article .book-grid .book-grid-item:hover .book-overlay {
-	@apply h-full
+  @apply h-full;
 }
 
 .article .book-grid .book-grid-item:hover p {
-	@apply delay-150 opacity-100
+  @apply delay-150 opacity-100;
 }
 
 /*
@@ -210,64 +214,64 @@
 */
 
 .article .post-body figure:has(img) figcaption {
-	@apply text-sm italic leading-snug text-zinc-500 dark:text-slate-400 pt-3;
+  @apply text-sm italic leading-snug text-zinc-500 dark:text-slate-400 pt-3;
 }
 
 .article .book-info {
-	@apply text-zinc-500 dark:text-slate-400;
+  @apply text-zinc-500 dark:text-slate-400;
 }
 
 /* Goodreads widget */
 .gr_custom_container_1656358133 {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	column-gap: 1rem;
-	row-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 3rem;
+  row-gap: 3rem;
 }
 
 @media only screen and (max-width: 768px) {
-	.gr_custom_container_1656358133 {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		row-gap: 4rem;
-	}
+  .gr_custom_container_1656358133 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 4rem;
+  }
 }
 
 .gr_custom_header_1656358133 {
-	grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 .gr_custom_each_container_1656358133 {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .gr_custom_title_1656358133 {
-	font-family: "hoss-sharp", sans-serif;
-	font-weight: 700;
-	font-size: 16px; /* 1rem */
-	margin-top: 1rem;
-	margin-bottom: 0.5rem;
+  /* font-family: "hoss-sharp", sans-serif; */
+  font-weight: 700;
+  font-size: 18px; /* 1rem */
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .gr_custom_book_container_1656358133 img {
-	transform: scale(1);
-	transition: all 200ms;
+  transform: scale(1);
+  transition: all 200ms;
 }
 
 .gr_custom_book_container_1656358133 img:hover {
-	transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .gr_custom_title_1656358133 a {
-	@apply dark:text-slate-100;
-	text-decoration-line: none;
+  @apply dark:text-slate-100;
+  text-decoration-line: none;
 }
 
 .gr_custom_title_1656358133 a:hover {
-	color: #fb7185; /* Rose 400 */
-	text-decoration-line: underline;
+  color: #fb7185; /* Rose 400 */
+  text-decoration-line: underline;
 }
 
 .gr_custom_author_1656358133 {
-	font-size: 16px; /* 1rem */
+  font-size: 16px; /* 1rem */
 }

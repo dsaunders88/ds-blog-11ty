@@ -11,6 +11,7 @@ tags:
   - "web development"
   - "2022"
 date: 2022-09-26
+stylesheet: code
 ---
 
 <div class="article-toc-wrapper" x-data="{ show: false }">

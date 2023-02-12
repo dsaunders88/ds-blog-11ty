@@ -127,12 +127,12 @@
         </div>
         <div class="col-span-4 lg:col-span-1">
             <p
-                class="mb-4 font-header text-sm font-bold uppercase tracking-widest dark:text-rose-400"
+                class="mb-2 font-header text-sm font-bold uppercase tracking-widest dark:text-rose-400"
             >
                 Colophon
             </p>
             <ul class="text-sm">
-                <li class="mb-4 lg:mb-2">
+                {# <li class="mb-4 lg:mb-2">
                     <span class="font-bold">Headings:</span>
                     <a href="{{ site.colophon.headingFont.url }}" target="_blank" class="group">
                         <span class="underline group-hover:no-underline"
@@ -142,9 +142,8 @@
                             class="fa-duotone fa-arrow-up-right-from-square relative bottom-[1px] ml-0.5 text-[12px] transition-transform duration-100 group-hover:-translate-y-1 text-rose-600 dark:text-rose-400"
                         ></i>
                     </a>
-                </li>
+                </li> #}
                 <li class="mb-4 lg:mb-2">
-                    <span class="font-bold">Body:</span>
                     <a href="{{ site.colophon.bodyFont.url }}" target="_blank" class="group">
                         <span class="underline group-hover:no-underline"
                             >{{ site.colophon.bodyFont.text }}</span
@@ -154,7 +153,7 @@
                         ></i>
                     </a>
                 </li>
-                <li class="mb-4 lg:mb-2">
+                <li class="mb-4 mt-4">
                     <span class="font-bold">Built with:</span>
                     <ul class="mt-2 lg:mt-1">
                         {% set buildTools = site.colophon.builtWith %}

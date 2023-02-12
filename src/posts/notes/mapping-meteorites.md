@@ -12,6 +12,7 @@ tags:
   - "web development"
   - "2023"
 date: 2023-02-07
+stylesheet: code
 ---
 
 <div class="article-toc-wrapper" x-data="{ show: false }">
