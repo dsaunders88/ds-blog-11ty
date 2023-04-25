@@ -73,6 +73,7 @@
 const themeToggleLight = document.getElementById("themeToggleLight");
 const themeToggleDark = document.getElementById("themeToggleDark");
 const themeToggle = document.getElementById("themeToggle");
+const carbonButton = document.getElementById("wcb")
 
 // Default settings
 if (
@@ -98,9 +99,11 @@ themeToggle.addEventListener("click", function() {
     if (localStorage.theme) {
         if (localStorage.theme === "light") {
             document.documentElement.classList.add("dark");
+            carbonButton.classList.add("wcb-d");
             localStorage.theme = "dark";
         } else {
             document.documentElement.classList.remove("dark");
+            carbonButton.classList.remove("wcb-d");
             localStorage.theme = "light";
         }
     }
@@ -108,9 +111,11 @@ themeToggle.addEventListener("click", function() {
     else {
         if (document.documentElement.classList.contains("dark")) {
             document.documentElement.classList.remove("dark");
+            carbonButton.classList.remove("wcb-d");
             localStorage.theme = "light";
         } else {
             document.documentElement.classList.add("dark");
+            carbonButton.classList.add("wcb-d");
             localStorage.theme = "dark";
         }
     }
@@ -139,6 +144,6 @@ themeToggle.addEventListener("click", function() {
 
 </script>
 {% endif %}
-
+<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
 </body>
 </html>
