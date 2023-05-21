@@ -29,7 +29,7 @@ permalink: /links/index.html
         >
             Web Studio
         </h3>
-        <div class="italic mb-0">My web design & development agency.</div>
+        <div class="italic mb-0 pr-8 leading-tight">My web design & development agency.</div>
         <i
             class="fa-solid fa-chevron-right group-hover:text-rose-600 dark:group-hover:text-rose-400 absolute right-0 top-1/2 transition-all duration-200"
         ></i>
@@ -57,7 +57,7 @@ permalink: /links/index.html
         >
             Design
         </h3>
-        <div class="italic mb-0">Samples of my graphic and web design work.</div>
+        <div class="italic mb-0 pr-8 leading-tight">Samples of my graphic and web design work.</div>
         <i
             class="fa-solid fa-chevron-right group-hover:text-rose-600 dark:group-hover:text-rose-400 absolute right-0 top-1/2 transition-all duration-200"
         ></i>

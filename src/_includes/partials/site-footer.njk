@@ -1,6 +1,6 @@
 <footer class="border-t border-zinc-200 bg-zinc-100 dark:border-slate-600 dark:bg-slate-900 py-24 px-8">
-    <section class="container mx-auto grid grid-cols-4 gap-8">
-        <div class="col-span-4 font-header font-bold text-base lg:col-span-1">
+    <section class="container mx-auto grid grid-cols-5 gap-8">
+        <div class="col-span-5 font-header font-bold text-base lg:col-span-1">
             <a
                 href="{{ navigation.navItems[0].url }}"
                 class="group pl-4 font-header text-4xl font-bold dark:text-slate-200 md:pl-0"
@@ -126,7 +126,24 @@
                 </li>
             </ul>
         </div>
-        <div class="col-span-4 lg:col-span-1">
+        <div class="col-span-5 lg:col-span-2">
+            <p class="text-base mb-3">Get these posts and other updates by email in my newsletter "A Partial Summing Up".</p>
+            <form
+                action="https://buttondown.email/api/emails/embed-subscribe/daniel-saunders"
+                method="post"
+                target="popupwindow"
+                onsubmit="window.open('https://buttondown.email/daniel-saunders', 'popupwindow')"
+                class="mb-6"
+                >
+                <label for="bd-email" class="text-sm italic inline-block mb-3">Enter your email</label>
+                <div class="flex flex-wrap gap-4">
+                    <input type="email" name="email" placeholder="Your email" id="bd-email" class="p-2 text-base shadow-sm rounded-md min-w-[15rem]" />
+                    <input type="submit" value="Subscribe" class="cursor-pointer text-base rounded-md w-fit text-zinc-50 bg-rose-600 dark:bg-gradient-to-r dark:from-rose-400 dark:to-rose-300 py-2 px-4 lg:mb-0 dark:text-slate-900 hover:-translate-y-1 transition-transform duration-100 font-bold" />
+                </div>
+                <p class="text-sm mt-4">
+                    <a href="https://buttondown.email/refer/daniel-saunders" target="_blank">Powered by Buttondown.</a>
+                </p>
+            </form>
             <p
                 class="mb-2 font-header text-sm font-bold uppercase tracking-widest dark:text-rose-400"
             >

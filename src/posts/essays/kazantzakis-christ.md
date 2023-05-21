@@ -1,7 +1,7 @@
 ---
 title: The Christ of Nikos Kazantzakis
 post_image:
-  url: /assets/kazantzakis-study.jpg
+  url: /assets/kazantzakis.jpg
   alt: Nikos Kazantzakis in his study
   source: <a href="https://www.kazantzaki.gr/gr/life-and-work/apodimia-kai-anagnorisi-193">Kazantzakis Museum</a>
 post_summary: Nikos Kazantzakis’ towering literary output reflects a lifelong effort to articulate both spiritual and political radicalisms, for which the figure of Christ is often the embodiment.
@@ -81,11 +81,11 @@ Fótis and the refugees encamp on a mountain above the village, near a chapel of
 
 Manoliós implores the villagers to follow the example of Christ—to clothe the poor and feed the hungry, to give a tenth of their labor to the refugees to sustain them—and wonders why belief in an eternal afterlife does not spur them to righteous action in this life. Their selfish attachment to material goods has caused them to blaspheme against Christ. The villagers are initially shocked, but they gradually come to realize that Manoliós is speaking the truth. The anxious elders try to interrupt this Sermon on the Mount and the spell being placed over the villagers, claiming:
 
-<div class="blockquote">"There's nothing now but grievances, scandals, thefts. The poor have grown bold and wish to raise their heads, the rich cannot sleep."</div>
+<blockquote class="blockquote">"There's nothing now but grievances, scandals, thefts. The poor have grown bold and wish to raise their heads, the rich cannot sleep."</blockquote>
 
 Against such impudence, the village priest, Father Grigóris, derides the crowd and cries:
 
-<div class="blockquote">"The world, remember, rests on four pillars. Along with faith, country, and honor, the fourth great pillar is property: don't lay hands on it!" (260)</div>
+<blockquote class="blockquote">"The world, remember, rests on four pillars. Along with faith, country, and honor, the fourth great pillar is property: don't lay hands on it!" (260)</blockquote>
 
 This scene is another familiar specter from Kazantzakis' life. In the middle 1920s, when Kazantzakis considered himself a revolutionary communist and was becoming enamored with the Soviet experiment, his hometown of Iráklio on Crete was the setting for an almost verbatim exchange between the authorities and a group of radicals. After the defeat of Greek nationalism in Anatolia, many veterans returned home radicalized and tried to foment communist movements in local areas. It appears from biographical documents that Kazantzakis personally tutored a group of these communists, whom he lauded as true "fishers of men." The incident turned into a public scandal when the local press denounced Kazantzakis and the group as "against worship of God, against respect for the family, against obedience to the law, against love of the fatherland, and against respect for private property." Kazantzakis agreed, and derided the bourgeois morality that claimed Christian values but that was in reality "always the image and likeness of the class that dominates" (Bien vol. 1, 94).
 

@@ -9,6 +9,17 @@ permalink: /now/index.html
 
 I’m Daniel Saunders, a designer, reader, and writer with somewhat eclectic interests, as you might have gathered from looking around this site. In real life I’m just as likely to be thinking about philosophical and social questions as I am coding problems, so that is what is reflected here! Subscribe to this site's [RSS feed](/rss-feed.xml) or get in touch at [my email](mailto:daniel.thomas.saunders@gmail).
 
+<div class="article-toc-wrapper" x-data="{ show: false }">
+<p class="toc-header" x-on:click="show = !show"><i class="fa-duotone fa-list"></i>On this page (click to expand):</p>
+
+<div x-show="show" x-collapse>
+
+[[toc]]
+
+</div>
+
+</div>
+
 ## Projects
 
 I started coding in earnest at the end of 2021, and since then it's become the primary focus of my longstanding freelance work. You can read a little bit about my journey from being a purely visual designer to being the unicorn "designer who codes" [on this post](/posts/essays/how-i-learned-to-stop-worrying-and-love-the-jamstack/) and hopefully more posts to come.
@@ -53,8 +64,35 @@ I also recently helped (very modestly) the great folks at the [Magnificast](http
 
 - In the last few months I've also finished a few excellent books: László Krasznahorkai's eerie novel *Satantango* ("*Twin Peaks: The Return* meets Tarkovsky"), Sven-Eric Liedman's very approachable *A World to Win: The Life and Works of Karl Marx*, and another Táíwò banger, *Elite Capture: How the Powerful Took Over Identity Politics*. Oh, and *Ulysses* for the second time.😁 -->
 
-<hr class="opacity-25 mt-16 mb-12"><br>
+<hr class="opacity-90 dark:opacity-25 mt-16 -mb-12"><br>
 
-<div id="gr_custom_widget_1656358133"></div>
+## Currently Reading
 
-<script src="https://www.goodreads.com/review/custom_widget/6334235.Currently%20Reading?cover_position=left&cover_size=medium&num_books=12&order=a&shelf=currently-reading&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1656358133&widget_text_color=000000&widget_title_size=large&widget_width=full" type="text/javascript" charset="utf-8"></script>
+<div class="grid grid-cols-1 pr-12 md:pr-0 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+{% for book in airtableReadingApp %}
+    {% set imageSrc = book.fields["Cover (from Book)"][0].url %}
+    {% set imageAlt = book.fields["Full Title (from Book)"][0] %}
+    {% if book.fields["Open Library URL (from Book)"][0] %}
+        {% set bookLink = book.fields["Open Library URL (from Book)"][0] %}
+    {% else %}
+        {% set bookLink = "#" %}
+    {% endif %}
+  <div class="space-y-2">
+    <a href={{ bookLink }} target="_blank" class="space-y-4 group !text-inherit !no-underline hover:!underline hover:!text-rose-600 dark:hover:!text-rose-400 transition-colors">
+        <div class="aspect-[6/9] flex items-center justify-center overflow-hidden [&>*]:object-cover [&>*]:w-full [&>*]:h-full group-hover:-translate-y-2 transition-transform">
+            {% inlineImage imageSrc, imageAlt, "100vw" %}
+        </div>
+        <div class="leading-tight text-lg"><strong>{{ book.fields["Full Title (from Book)"][0] }}</strong></div>
+    </a>
+    <div>
+        <div class="text-base">{{ book.fields["Full Name (from Author(s)) (from Book)"][0] }}</div>
+        <div class="text-sm opacity-75"><em>Reading for {{ book.fields["Time Read (Weeks)"] }} weeks</em></div>
+    </div>
+  </div>
+  
+  {% endfor %}
+</div>
+
+<!-- <div id="gr_custom_widget_1656358133"></div>
+
+<script src="https://www.goodreads.com/review/custom_widget/6334235.Currently%20Reading?cover_position=left&cover_size=medium&num_books=12&order=a&shelf=currently-reading&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1656358133&widget_text_color=000000&widget_title_size=large&widget_width=full" type="text/javascript" charset="utf-8"></script> -->
