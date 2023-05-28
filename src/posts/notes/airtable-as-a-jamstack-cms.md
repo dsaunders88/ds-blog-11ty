@@ -140,7 +140,7 @@ The function will return an array of objects from our specified Airtable table, 
 ]
 ```
 
-To render the data, I call the function on a given page, making use of Astro's front matter to import and set variables specific to that page. In this example, I'm also using a "Credit" [Astro component](https://docs.astro.build/en/core-concepts/astro-components/), which accepts props that the `credits` data can map onto in the markup:
+To render the data, I call the function on a given page, making use of Astro's front matter to import and set variables specific to that page. In this example, I'm also using a "Credit" [Astro component](https://docs.astro.build/en/core-concepts/astro-components/), which both accepts props and creates slots to server-render child content—in this case the `credits` data we're getting from the `getRecords()` function call:
 
 <figure>
 <figcaption class="code-caption">src/pages/credits.astro</figcaption>
@@ -148,7 +148,8 @@ To render the data, I call the function on a given page, making use of Astro's f
 ```jsx
 ---
 import { getRecords } from "../utils/airtable";
-import Credit from "../components/Card.astro";
+import { getCategoryStyle } from "../utils/helpers"
+import Credit from "../components/Credit.astro";
 
 let tableId = 'Credits'; // Can be the name or unique ID of the Airtable table
 
@@ -159,28 +160,34 @@ const credits = await getRecords(tableId, 'Year', 'desc');
 
 <h2>Credits</h2>
 <div class="slider">
-    {credits.map(item =>
+    {credits.map((item) => {
+        // Use object destructuring to make accessing the properties more easily accessible
+        const { fields } = item;
+        // Airtable's image field is an array, so to get the
+        // image source we can access the first index of the array
+        const imageSrc = fields.Image[0].url;
+        // A custom helper function that assigns unique CSS classes
+        // based on an item's category input
+        const categoryStyle = getCategoryStyle(fields.Category);
+        return (
         <Credit
-            title={item.fields.Name}
-            year={item.fields.Year}
-            role={item.fields.Role}
-            detail={item.fields.Detail}
-            link={item.fields.Link}
-            // Airtable's image field is an array, so to get the
-            // image source we can access the first index of the array
-            imageSrc={item.fields.Image[0].url}
-            imageAlt={item.fields.ImageAlt}
-            categoryName={item.fields.Category}
-            // Using Astro's class:list directive on the Credit component
-            // to conditionally apply different styles here based on
-            // the category value
-            categoryStyle={
-                item.fields.Category == 'TV Series' && [ 'category tv-series' ]
-                || item.fields.Category == 'TV Special' && [ 'category tv-special' ]
-                || item.fields.Category == 'Film' && [ 'category film' ]
-            }
-        />
-    )}
+            // props passed to the component
+            href={fields.Link}
+            imageSrc={imageSrc}
+            imageAlt={fields.ImageAlt}
+            categoryName={fields.Category}
+            categoryStyle={categoryStyle}
+        >
+          <h3>{fields.Name}</h3>
+          <div class="details">
+            <p class="cluster">
+              {[fields.Year, fields.Role].join(' • ')}
+            </p>
+            <p><em>{fields.Detail}</em></p>
+          </div>
+        </Credit>
+      );
+    })}
 </div>
 
 ```
@@ -201,7 +208,7 @@ Airtable [recently announced](https://support.airtable.com/docs/changes-to-airta
 ```jsx
 ---
 import { Image } from "@astrojs/image/components";
-const { title, date, role, detail, link, imageSrc, imageAlt } = Astro.props;
+const { href, imageSrc, imageAlt, categoryName, categoryStyle } = Astro.props;
 ---
 // ...
 // Other component markup
