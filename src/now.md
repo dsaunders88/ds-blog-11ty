@@ -34,7 +34,7 @@ I also recently helped (very modestly) the great folks at the [Magnificast](http
 
 ### Computer
 
-- Dell XPS 13 9310
+- MacBook Pro 14" (M2)
 - Samsung UR55 Series 28" IPS 4K UHD Monitor
 - Audio-Technica ATH-M50x Headphones
 - Dell Wireless Mouse & Keyboard
@@ -43,7 +43,7 @@ I also recently helped (very modestly) the great folks at the [Magnificast](http
 
 - VSCode • [Monokai Pro Theme](https://monokai.pro/)
 - Design • Figma, Adobe CC
-- Browser • [Polypane](https://polypane.app/)
+- Browser • [Arc](https://arc.net/)
 - Writing • [iA Writer](https://ia.net/writer)
 - Notes • [Reflect](https://reflect.app/)
 - Project Management • [Airtable](https://www.airtable.com/product)
@@ -70,7 +70,7 @@ I also recently helped (very modestly) the great folks at the [Magnificast](http
 
 <div class="grid grid-cols-1 pr-12 md:pr-0 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 {% for book in airtableReadingApp %}
-    {% set imageSrc = book.fields["Cover (from Book)"][0].url %}
+    {% set imageSrc = book.fields["Cover (Lookup)"][0].url %}
     {% set imageAlt = book.fields["Full Title (from Book)"][0] %}
     {% if book.fields["Open Library URL (from Book)"][0] %}
         {% set bookLink = book.fields["Open Library URL (from Book)"][0] %}
@@ -85,7 +85,7 @@ I also recently helped (very modestly) the great folks at the [Magnificast](http
         <div class="leading-tight text-lg"><strong>{{ book.fields["Full Title (from Book)"][0] }}</strong></div>
     </a>
     <div>
-        <div class="text-base">{{ book.fields["Full Name (from Author(s)) (from Book)"][0] }}</div>
+        <div class="text-base">{{ book.fields["Authors (Lookup)"][0] }}</div>
         <div class="text-sm opacity-75"><em>Reading for {{ book.fields["Time Read (Weeks)"] }} weeks</em></div>
     </div>
   </div>
