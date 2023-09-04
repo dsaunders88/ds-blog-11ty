@@ -92,17 +92,6 @@ permalink: /links/index.html
     </a>
     <a
         rel="me"
-        href="{{ site.socialLinks.twitter }}"
-        class="flex flex-col items-center p-4 rounded-md border !no-underline !text-inherit border-zinc-200 dark:border-slate-600 hover:bg-zinc-100 dark:hover:bg-slate-900 hover:!text-rose-600 dark:hover:!text-rose-400"
-        target="_blank"
-    >
-        <i
-        class="fa-brands fa-twitter text-3xl"
-    ></i>
-        <span>Twitter</span>
-    </a>
-    <a
-        rel="me"
         href="{{ site.socialLinks.github }}"
         class="flex flex-col items-center p-4 rounded-md border !no-underline !text-inherit border-zinc-200 dark:border-slate-600 hover:bg-zinc-100 dark:hover:bg-slate-900 hover:!text-rose-600 dark:hover:!text-rose-400"
         target="_blank"

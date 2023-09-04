@@ -24,11 +24,11 @@ I’m Daniel Saunders, a designer, reader, and writer with somewhat eclectic int
 
 I started coding in earnest at the end of 2021, and since then it's become the primary focus of my longstanding freelance work. You can read a little bit about my journey from being a purely visual designer to being the unicorn "designer who codes" [on this post](/posts/essays/how-i-learned-to-stop-worrying-and-love-the-jamstack/) and hopefully more posts to come.
 
-**As a major step in that process, I'm excited to say that at the end of 2022, I have launched a new [web design & development studio](https://www.ds-design.xyz/) focused on building Jamstack websites.** Get in touch for more information!
+**As a major step in that process, I'm excited to say that as of the end of 2022, I have launched a new [web design & development studio](https://www.ds-design.xyz/) focused on building Jamstack websites.** Get in touch for more information!
 
 Check out my [design work page](https://www.danielsaunders.xyz/) for some recent website projects that I'm particulary proud of.
 
-I also recently helped (very modestly) the great folks at the [Magnificast](https://themagnificast.com/) with some design things on their zine about [Christian solidarity with Cuba](https://t.co/l8CVojNJub). Check it out if you're interested!
+<!-- I also recently helped (very modestly) the great folks at the [Magnificast](https://themagnificast.com/) with some design things on their zine about [Christian solidarity with Cuba](https://t.co/l8CVojNJub). Check it out if you're interested! -->
 
 ## Uses
 
