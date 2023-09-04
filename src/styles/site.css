@@ -151,7 +151,14 @@
   @apply mb-8;
 }
 
+/*
+add fallback for firefox
 .article .post-body figure:has(img) {
+  @apply mb-8;
+}
+*/
+
+.article .post-body figure {
   @apply mb-8;
 }
 
@@ -214,6 +221,11 @@
 */
 
 .article .post-body figure:has(img) figcaption {
+  @apply text-sm italic leading-snug text-zinc-500 dark:text-slate-400 pt-3;
+}
+
+/* add fallback for firefox */
+.article .post-body figure img + figcaption {
   @apply text-sm italic leading-snug text-zinc-500 dark:text-slate-400 pt-3;
 }
 

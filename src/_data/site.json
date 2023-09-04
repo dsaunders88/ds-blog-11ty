@@ -11,7 +11,6 @@
   "socialHandle": "@dothedan",
   "socialLinks": {
     "rss": "https://daniel-saunders.com/rss-feed.xml",
-    "twitter": "https://twitter.com/dothedan",
     "mastodon": "https://mstdn.social/@dsaunders",
     "github": "https://github.com/dsaunders88",
     "dribbble": "https://dribbble.com/dothedan",
@@ -19,6 +18,7 @@
   },
   "siteLinks": {
     "portfolio": "https://www.danielsaunders.xyz/",
+    "webstudio": "https://www.ds-design.xyz/",
     "linktree": "https://linktr.ee/dothedan"
   },
   "colophon": {
@@ -32,16 +32,12 @@
     },
     "builtWith": [
       {
-        "text": "TailwindCSS",
-        "url": "https://tailwindcss.com/"
+        "text": "Eleventy",
+        "url": "https://www.11ty.dev/"
       },
       {
         "text": "Alpine.js",
         "url": "https://alpinejs.dev/"
-      },
-      {
-        "text": "Eleventy",
-        "url": "https://www.11ty.dev/"
       }
     ]
   }
