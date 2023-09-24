@@ -5,7 +5,7 @@ post_image:
   alt: Reading tracker app with Airtable and Deno Fresh, showing the Airtable and Deno logos.
   source:
 post_summary: Using Airtable as a back-end to build out a custom reading tracker app.
-post_intro: As is evident from this blog, I’m a big fan of Airtable, and so as I set out to build myself a custom reading tracker, it was naturally my first choice for a hybrid back-end/administrative interface to <a href="/posts/notes/building-myself-a-reading-tracker-app-with-airtable-and-deno-fresh-part-1">use for my reading data</a>.
+post_intro: As is evident from this blog, I’m a big fan of Airtable, and so as I set out to build myself a custom reading tracker, it was naturally my first choice for a hybrid back-end/administrative interface to <a href="/posts/notes/building-myself-a-reading-tracker-app-with-airtable-and-deno-fresh-part-1">use for a custom reading tracker</a>.
 category: notes
 tags:
   - design
@@ -27,7 +27,7 @@ stylesheet: code
 
 </div>
 
-<span class="sr-only">As is evident from this blog, I’m a big fan of Airtable, and so as I set out to build myself a custom reading tracker, it was naturally my first choice for a hybrid back-end/administrative interface to <a href="/posts/notes/building-myself-a-reading-tracker-app-with-airtable-and-deno-fresh-part-1">use for my reading data</a>.</span> Airtable’s friendly UI makes structuring relational data fast and easy, and its support for automations, scripting, and webhooks, as well as its robust <abbr title="Application Programming Interface">API</abbr>, means that you can make it the backbone of sophisticated custom apps. This combination of customization, ease-of-use, and web interoperability makes it almost too good to be true for this type of scenario.
+<span class="sr-only">As is evident from this blog, I’m a big fan of Airtable, and so as I set out to build myself a custom reading tracker, it was naturally my first choice for a hybrid back-end/administrative interface to <a href="/posts/notes/building-myself-a-reading-tracker-app-with-airtable-and-deno-fresh-part-1">use for a custom reading tracker</a>.</span> Airtable’s friendly UI makes structuring relational data fast and easy, and its support for automations, scripting, and webhooks, as well as its robust <abbr title="Application Programming Interface">API</abbr>, means that you can make it the backbone of sophisticated custom apps. This combination of customization, ease-of-use, and web interoperability makes it almost too good to be true for this type of scenario.
 
 ## Et tu, Airtable?
 
