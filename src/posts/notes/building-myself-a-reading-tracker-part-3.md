@@ -93,6 +93,8 @@ As a case study in how Fresh works and utilizes native web APIs to create a dyna
 
 When looking at a URL for say, a video streaming site, you may have noticed some odd-looking text appended to the end of something like a category page, like this: "?category=series&genre=80s-action". These "search parameters" can actually store all sorts of useful data on a URL (as well as "track" their mutation in browser history), and can be manipulated and parsed by the `URLSearchParams` [web interface](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams). In Fresh, you have access to this interface _on the server_ 🤯.
 
+Another _huge_ benefit of URL search parameters is the inherent shareability they offer. Whatever page view you might be looking at with the parameters "?category=series&genre=80s-action" (hopefully some bad-ass Kurt Russell movies) you could send to someone else and they would see the _same thing_. This is what the web is all about—creating and referencing hypertext to build a more connected world.
+
 For my case, I want to use search parameters to filter my reading activity feed, using strings like "filter=currently-reading" and "sort=desc". Fresh makes this incredibly easy to do within a page component's "route handler"—really just a wrapper for an HTTP method, whose response can then be passed down to other components on the page. The handler for my home page (located in the project's `routes/index.tsx` file) does a few important things:
 
 - Makes an async request to the Airtable endpoint for the book data I want—in this case, all of the reading activity data, which includes dates read and information on books
@@ -211,7 +213,9 @@ const sidebarActivity = groupBy(preparedActivity, (item) => item.status);
 
 </figure>
 
-Finally, we can return the markup for the `Home` component, which will dynamically update the records in a list of `FeedItem` components, depending on the current URL search parameters. The sidebar links will also show the number of records in each category, and will show an active style if the search parameters match. We can set the new URL search parameters on these links with a simple `<a>` tag, and dynamically interpolate the correct values for the `href` attribute based on our current variables, i.e., `?filter=all&sort=${currentSort}`, which will "preserve" the state of our current selections. Here is the structure of the entire `Home` component following the route handler (with some HTML and classes stripped for better readability):
+Finally, we can return the markup for the `Home` component, which will dynamically update the records in a list of `FeedItem` components, depending on the current URL search parameters. The sidebar links will also show the number of records in each category, and will show an active style if the search parameters match. We can set the new URL search parameters on these links with a simple `<a>` tag, and dynamically interpolate the correct values for the `href` attribute based on our current variables, i.e., `?filter=all&sort=${currentSort}`, which will "preserve" the state of our current selections.
+
+Here is the structure of the entire `Home` component following the route handler (with some HTML and classes stripped for better readability):
 
 <figure>
 <figcaption class="code-caption">routes/index.tsx</figcaption>
