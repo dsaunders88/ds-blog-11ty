@@ -1,7 +1,7 @@
 ---
 title: Building Myself a Reading Tracker App with Airtable and Deno Fresh, Part 2
 post_image:
-  url: /assets/reading-tracker-app.jpg
+  url: /assets/reading-tracker-post-2.jpg
   alt: Reading tracker app with Airtable and Deno Fresh, showing the Airtable and Deno logos.
   source:
 post_summary: Using Airtable as a back-end to build out a custom reading tracker app.
