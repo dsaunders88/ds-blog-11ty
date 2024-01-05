@@ -187,7 +187,7 @@ add fallback for firefox
 }
 
 .article .book-grid img {
-  @apply relative h-full object-cover shadow-md transition-all duration-100;
+  @apply relative h-full aspect-[6/9] object-cover shadow-md transition-all duration-100;
 }
 
 .article .book-grid .book-overlay {

@@ -64,34 +64,7 @@ Check out my [design work page](https://www.danielsaunders.xyz/) for some recent
 
 - In the last few months I've also finished a few excellent books: László Krasznahorkai's eerie novel *Satantango* ("*Twin Peaks: The Return* meets Tarkovsky"), Sven-Eric Liedman's very approachable *A World to Win: The Life and Works of Karl Marx*, and another Táíwò banger, *Elite Capture: How the Powerful Took Over Identity Politics*. Oh, and *Ulysses* for the second time.😁 -->
 
-<hr class="opacity-90 dark:opacity-25 mt-16 -mb-12"><br>
-
-## Currently Reading
-
-<div class="grid grid-cols-1 pr-12 md:pr-0 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-{% for book in airtableReadingApp %}
-    {% set imageSrc = book.fields["Cover (Lookup)"][0].url %}
-    {% set imageAlt = book.fields["Full Title (from Book)"][0] %}
-    {% if book.fields["Open Library URL (from Book)"][0] %}
-        {% set bookLink = book.fields["Open Library URL (from Book)"][0] %}
-    {% else %}
-        {% set bookLink = "#" %}
-    {% endif %}
-  <div class="space-y-2">
-    <a href={{ bookLink }} target="_blank" class="space-y-4 group !text-inherit !no-underline hover:!underline hover:!text-rose-600 dark:hover:!text-rose-400 transition-colors">
-        <div class="aspect-[6/9] flex items-center justify-center overflow-hidden [&>*]:object-cover [&>*]:w-full [&>*]:h-full group-hover:-translate-y-2 transition-transform">
-            {% inlineImage imageSrc, imageAlt, "100vw" %}
-        </div>
-        <div class="leading-tight text-lg"><strong>{{ book.fields["Full Title (from Book)"][0] }}</strong></div>
-    </a>
-    <div>
-        <div class="text-base">{{ book.fields["Authors (Lookup)"][0] }}</div>
-        <div class="text-sm opacity-75"><em>Reading for {{ book.fields["Time Read (Weeks)"] }} weeks</em></div>
-    </div>
-  </div>
-  
-  {% endfor %}
-</div>
+<!-- <hr class="opacity-90 dark:opacity-25 mt-16 -mb-12"><br> -->
 
 <!-- <div id="gr_custom_widget_1656358133"></div>
 

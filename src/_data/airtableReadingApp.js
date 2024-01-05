@@ -1,22 +1,47 @@
-require("dotenv").config();
-const EleventyFetch = require("@11ty/eleventy-fetch");
+// require("dotenv").config();
+// const EleventyFetch = require("@11ty/eleventy-fetch");
 
-module.exports = async function () {
-  const airtableToken = process.env.AIRTABLE_ACCESS_TOKEN;
-  const baseId = process.env.AIRTABLE_BASE_ID;
-  const tableId = "tblr6UI7PA9ETQlOg"; // Reading activity
+// module.exports = async function () {
+//   const airtableToken = process.env.AIRTABLE_ACCESS_TOKEN;
+//   const baseId = process.env.AIRTABLE_BASE_ID;
+//   const tableId = "tblr6UI7PA9ETQlOg"; // Reading activity
 
-  let url = `https://api.airtable.com/v0/${baseId}/${tableId}?fields%5B%5D=Date+Started&fields%5B%5D=Full+Title+(from+Book)&fields%5B%5D=Percent+Read&fields%5B%5D=Authors+(Lookup)&fields%5B%5D=Cover+(Lookup)&fields%5B%5D=Time+Read+(Weeks)&fields%5B%5D=Open+Library+URL+(from+Book)&sort%5B0%5D%5Bfield%5D=Date+Started&sort%5B0%5D%5Bdirection%5D=desc&view=Currently+Reading`;
+//   let url = `https://api.airtable.com/v0/${baseId}/${tableId}`;
 
-  const data = await EleventyFetch(url, {
-    duration: "1m",
-    type: "json",
-    fetchOptions: {
-      headers: {
-        authorization: `Bearer ${airtableToken}`,
-      },
-    },
-  });
+//   const params = new URLSearchParams([
+//     ["returnFieldsByFieldId", "true"],
+//     ["view", "viwo1vSF2U6Xi3taY"],
+//     ["fields", "fldKlpKfwoCqCJbVM"], // title
+//     ["fields", "fldC7XcQ4urRb4fQV"], // authors
+//     ["fields", "fldpzGGsP5bR1hUAW"], // feed date
+//     // ["fields", "fldEtqJkG0cSKP8dK"], // cover
+//     ["fields", "fld1sg0p9VvabKQDP"], // time read
+//     ["fields", "fld9dnT2caLS69tcb"], // url
+//   ]);
 
-  return data.records;
-};
+//   // const data = await EleventyFetch(`${url}?${params.toString()}`, {
+//   //   duration: "1s",
+//   //   type: "json",
+//   //   fetchOptions: {
+//   //     headers: {
+//   //       authorization: `Bearer ${airtableToken}`,
+//   //     },
+//   //   },
+//   // });
+//   const headers = new Headers();
+//   headers.append("Authorization", `Bearer ${airtableToken}`);
+//   const data = await EleventyFetch(`${url}?${params.toString()}`, {
+//     duration: "1s",
+//     type: "json",
+//     fetchOptions: {
+//       headers: {
+//         authorization: `Bearer ${airtableToken}`,
+//       },
+//     },
+//   });
+
+//   if (!data.ok) {
+//     console.log("Error fetching Airtable book data.");
+//   }
+//   return data.records;
+// };
